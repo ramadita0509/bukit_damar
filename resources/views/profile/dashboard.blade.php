@@ -59,11 +59,11 @@
           <div class="d-flex align-items-center">
             <i class="bi bi-info-circle fs-1 me-3"></i>
             <div>
-              <h6 class="mb-0">Informasi</h6>
-              <small>Lihat informasi website</small>
+              <h6 class="mb-0">Laporan Keuangan</h6>
+              <small>Lihat laporan keuangan</small>
             </div>
           </div>
-          <a href="{{ url('/skck') }}" class="btn btn-light btn-sm mt-3">Lihat</a>
+          <a href="{{ url('/laporan') }}" class="btn btn-light btn-sm mt-3">Lihat</a>
         </div>
       </div>
     </div>

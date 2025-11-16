@@ -10,9 +10,8 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('profile.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/administrator', function () {
-    return view('profile.administrator');
-})->middleware(['auth', 'verified'])->name('administrator');
+Route::get('/laporan', function () {    return view('profile.frontend.laporan');
+})->middleware(['auth', 'verified'])->name('laporan');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

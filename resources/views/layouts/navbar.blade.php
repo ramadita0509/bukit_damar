@@ -41,11 +41,11 @@
           </ul>
         </li>
         <li><a href="{{ url('/kontak') }}" class="{{ Request::is('kontak') ? 'active' : '' }}">Kontak</a></li>
-        @if (Route::has('login'))
+        {{-- @if (Route::has('login'))
         @auth
           <li><a href="{{ url('/laporan') }}" class="{{ Request::is('laporan') ? 'active' : '' }}">Laporan Keuangan</a></li>
         @endauth
-        @endif
+        @endif --}}
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

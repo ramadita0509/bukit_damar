@@ -29,12 +29,33 @@
             </p>
 
             <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control {{ $errors->userDeletion->has('password') ? 'is-invalid' : '' }}" id="password" name="password" placeholder="Masukkan password Anda">
-              @if($errors->userDeletion->has('password'))
-                <div class="invalid-feedback">{{ $errors->userDeletion->first('password') }}</div>
-              @endif
+              <label for="delete_password" class="form-label">Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control {{ $errors->userDeletion->has('password') ? 'is-invalid' : '' }}" id="delete_password" name="password" placeholder="Masukkan password Anda">
+                <button class="btn btn-outline-secondary" type="button" id="toggleDeletePassword" style="border-color: #ced4da;">
+                  <i class="bi bi-eye" id="iconDeletePassword"></i>
+                </button>
+                @if($errors->userDeletion->has('password'))
+                  <div class="invalid-feedback d-block">{{ $errors->userDeletion->first('password') }}</div>
+                @endif
+              </div>
             </div>
+
+            <script>
+              document.getElementById('toggleDeletePassword').addEventListener('click', function() {
+                const passwordField = document.getElementById('delete_password');
+                const icon = document.getElementById('iconDeletePassword');
+                if (passwordField.type === 'password') {
+                  passwordField.type = 'text';
+                  icon.classList.remove('bi-eye');
+                  icon.classList.add('bi-eye-slash');
+                } else {
+                  passwordField.type = 'password';
+                  icon.classList.remove('bi-eye-slash');
+                  icon.classList.add('bi-eye');
+                }
+              });
+            </script>
           </div>
 
           <div class="modal-footer">
