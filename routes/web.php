@@ -39,5 +39,7 @@ Route::get('/surat-kematian', function () {
 Route::get('/izin-usaha', function () {
     return view('profile.frontend.izin-usaha');
 });
-
+Route::get('/kontak', function () {
+    return view('profile.frontend.kontak');
+});
 require __DIR__.'/auth.php';
