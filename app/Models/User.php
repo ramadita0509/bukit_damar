@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -44,5 +45,53 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Check if user is super admin
+     */
+    public function isSuperAdmin(): bool
+    {
+        return $this->role === 'super_admin';
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is admin or super admin
+     */
+    public function isAdminOrSuperAdmin(): bool
+    {
+        return in_array($this->role, ['admin', 'super_admin']);
+    }
+
+    /**
+     * Check if user can manage users
+     */
+    public function canManageUsers(): bool
+    {
+        return $this->isSuperAdmin();
+    }
+
+    /**
+     * Check if user can manage transactions
+     */
+    public function canManageTransactions(): bool
+    {
+        return $this->isAdminOrSuperAdmin();
+    }
+
+    /**
+     * Check if user can delete transactions
+     */
+    public function canDeleteTransactions(): bool
+    {
+        return $this->isSuperAdmin();
     }
 }

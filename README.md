@@ -51,7 +51,7 @@ Website ini dibangun menggunakan:
    ```
 8. Jalankan development server:
    ```bash
-   php artisan serve
+   composer run dev
    ```
 
 ## Kontribusi
