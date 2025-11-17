@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 
 class TransaksiController extends Controller
 {
@@ -49,7 +50,7 @@ class TransaksiController extends Controller
 
         Transaksi::create($validated);
 
-        return redirect()->route('transaksi.index')
+        return redirect()->route('laporan')
             ->with('success', 'Transaksi berhasil ditambahkan!');
     }
 
@@ -129,7 +130,7 @@ class TransaksiController extends Controller
     public function laporan(Request $request)
     {
         $bulan = $request->get('bulan');
-        $tahun = $request->get('tahun', date('Y'));
+        $tahun = $request->get('tahun', Carbon::now('Asia/Jakarta')->format('Y'));
 
         $query = Transaksi::query();
 
@@ -161,7 +162,7 @@ class TransaksiController extends Controller
     public function laporanIuranPdf(Request $request)
     {
         $bulan = $request->get('bulan');
-        $tahun = $request->get('tahun', date('Y'));
+        $tahun = $request->get('tahun', Carbon::now('Asia/Jakarta')->format('Y'));
 
         $query = Transaksi::where('jenis', 'pemasukan')
             ->where('kategori', 'Iuran');
@@ -192,7 +193,7 @@ class TransaksiController extends Controller
     public function exportExcel(Request $request)
     {
         $bulan = $request->get('bulan');
-        $tahun = $request->get('tahun', date('Y'));
+        $tahun = $request->get('tahun', Carbon::now('Asia/Jakarta')->format('Y'));
 
         $query = Transaksi::query();
 
@@ -224,7 +225,7 @@ class TransaksiController extends Controller
             // Header
             fputcsv($file, ['LAPORAN KEUANGAN RT 002 RW 017']);
             fputcsv($file, ['Periode: ' . $periode]);
-            fputcsv($file, ['Tanggal Export: ' . date('d F Y H:i:s')]);
+            fputcsv($file, ['Tanggal Export: ' . Carbon::now('Asia/Jakarta')->format('d F Y H:i:s')]);
             fputcsv($file, []); // Empty row
 
             // Table header
@@ -259,5 +260,24 @@ class TransaksiController extends Controller
         };
 
         return response()->stream($callback, 200, $headers);
+    }
+
+    /**
+     * Serve bukti transaksi file
+     */
+    public function showBukti($filename)
+    {
+        // Pastikan user sudah login
+        if (!Auth::check()) {
+            abort(403, 'Unauthorized');
+        }
+
+        $path = 'bukti-transaksi/' . $filename;
+
+        if (!Storage::disk('public')->exists($path)) {
+            abort(404, 'File not found');
+        }
+
+        return response()->file(Storage::disk('public')->path($path));
     }
 }

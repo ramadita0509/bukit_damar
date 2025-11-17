@@ -2,6 +2,7 @@
 
 @php
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 @endphp
 
 @section('title', 'Laporan Keuangan - Website Bukit Damar')
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 @section('content')
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section" style="padding-top: 120px;">
+    <section id="hero" class="hero section">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -53,7 +54,7 @@ use Illuminate\Support\Facades\Storage;
                     <label for="tahun" class="form-label">Tahun</label>
                     <select class="form-select" id="tahun" name="tahun">
                       <option value="">Pilih Tahun</option>
-                      @for($i = date('Y'); $i >= date('Y') - 5; $i--)
+                      @for($i = Carbon::now('Asia/Jakarta')->year; $i >= Carbon::now('Asia/Jakarta')->year - 5; $i--)
                         <option value="{{ $i }}" {{ request('tahun') == $i ? 'selected' : '' }}>{{ $i }}</option>
                       @endfor
                     </select>
@@ -71,8 +72,8 @@ use Illuminate\Support\Facades\Storage;
 
         <!-- Summary Cards -->
         @php
-          $selectedBulan = $bulan ?? request('bulan', date('m'));
-          $selectedTahun = $tahun ?? request('tahun', date('Y'));
+          $selectedBulan = $bulan ?? request('bulan', Carbon::now('Asia/Jakarta')->format('m'));
+          $selectedTahun = $tahun ?? request('tahun', Carbon::now('Asia/Jakarta')->format('Y'));
           $bulanNama = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
         @endphp
 
@@ -195,9 +196,9 @@ use Illuminate\Support\Facades\Storage;
                           </td>
                           <td class="text-center">
                             @if($item->bukti)
-                              <button type="button" class="btn btn-sm btn-info" onclick="showBuktiModal('{{ Storage::url($item->bukti) }}')" title="Lihat Bukti">
+                              <a href="{{ Storage::url($item->bukti) }}" target="_blank" class="btn btn-sm btn-info" title="Lihat Bukti">
                                 <i class="bi bi-image"></i>
-                              </button>
+                              </a>
                             @else
                               <span class="text-muted">-</span>
                             @endif
@@ -263,7 +264,7 @@ use Illuminate\Support\Facades\Storage;
           <h4 class="text-center">RT 002 RW 017 Desa Singajaya</h4>
           <p class="text-center">Kecamatan Jonggol, Kabupaten Bogor</p>
           <p class="text-center"><strong>Periode:</strong> {{ $selectedBulan ? $bulanNama[(int)$selectedBulan] : 'Semua' }} {{ $selectedTahun }}</p>
-          <p class="text-center"><strong>Tanggal Cetak:</strong> {{ date('d F Y H:i:s') }}</p>
+          <p class="text-center"><strong>Tanggal Cetak:</strong> {{ Carbon::now('Asia/Jakarta')->format('d F Y H:i:s') }}</p>
           <hr>
         </div>
 
@@ -328,6 +329,25 @@ use Illuminate\Support\Facades\Storage;
 
     @push('styles')
     <style>
+      /* Override hero section untuk halaman laporan - setengah layar dengan background */
+      #hero.hero {
+        min-height: 50vh !important;
+        padding: 60px 0 60px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      #hero.hero h1 {
+        font-size: 36px !important;
+        line-height: 44px !important;
+        margin-bottom: 15px !important;
+      }
+
+      #hero.hero p.lead {
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
+      }
+
       @media print {
         body {
           background: white !important;
@@ -385,28 +405,7 @@ use Illuminate\Support\Facades\Storage;
           btnDownload.style.display = 'none';
         }
       }
-
-      function showBuktiModal(imageUrl) {
-        const modal = new bootstrap.Modal(document.getElementById('buktiModal'));
-        document.getElementById('buktiModalImage').src = imageUrl;
-        modal.show();
-      }
     </script>
     @endpush
-
-    <!-- Modal untuk melihat bukti transaksi -->
-    <div class="modal fade" id="buktiModal" tabindex="-1" aria-labelledby="buktiModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="buktiModalLabel">Bukti Transaksi</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body text-center">
-            <img id="buktiModalImage" src="" alt="Bukti Transaksi" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-    </div>
 
   @endsection

@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section" style="padding-top: 120px;">
+    <section id="hero" class="hero section">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -93,5 +93,28 @@
 
       </div>
     </section>
+
+    @push('styles')
+    <style>
+      /* Override hero section untuk halaman - setengah layar dengan background */
+      #hero.hero {
+        min-height: 50vh !important;
+        padding: 60px 0 60px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      #hero.hero h1 {
+        font-size: 36px !important;
+        line-height: 44px !important;
+        margin-bottom: 15px !important;
+      }
+
+      #hero.hero p.lead {
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
+      }
+    </style>
+    @endpush
 
   @endsection

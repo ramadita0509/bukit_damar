@@ -52,6 +52,9 @@ Route::get('/kontak', function () {
 
 // Route untuk Transaksi Keuangan
 Route::middleware(['auth', 'verified'])->group(function () {
+    // Route untuk melihat bukti transaksi (semua user yang sudah login)
+    Route::get('/storage/bukti-transaksi/{filename}', [TransaksiController::class, 'showBukti'])->name('transaksi.bukti');
+
     // Hanya admin dan super admin bisa input/edit transaksi
     Route::middleware('role:admin,super_admin')->group(function () {
         Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');

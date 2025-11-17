@@ -9,8 +9,8 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{{ url('/') }}" class="{{ Request::is('/') ? 'active' : '' }}">Beranda<br></a></li>
-        <li><a href="{{ url('/') }}#about">Visi & Misi</a></li>
-        <li><a href="{{ url('/') }}#services">Kepengurusan</a></li>
+        <li><a href="{{ url('/') }}#features">Visi & Misi</a></li>
+        <li><a href="{{ url('/') }}#team">Kepengurusan</a></li>
 
         <li class="dropdown">
           <a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
