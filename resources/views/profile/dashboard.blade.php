@@ -69,4 +69,22 @@
     </div>
   </div>
 
+  @if(Auth::user()->isSuperAdmin())
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card shadow-sm border-0">
+          <div class="card-header bg-danger text-white">
+            <h5 class="mb-0"><i class="bi bi-people me-2"></i>Kelola Users</h5>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">Sebagai Super Admin, Anda dapat mengelola semua user yang terdaftar di sistem.</p>
+            <a href="{{ route('users.index') }}" class="btn btn-danger">
+              <i class="bi bi-people me-2"></i>Kelola Users
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  @endif
+
 @endsection

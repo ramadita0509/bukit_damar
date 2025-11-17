@@ -21,6 +21,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Route untuk manage users (hanya super admin)
+    Route::middleware('role:super_admin')->group(function () {
+        Route::get('/users', [ProfileController::class, 'index'])->name('users.index');
+        Route::delete('/users/{user}', [ProfileController::class, 'destroyUser'])->name('users.destroy');
+    });
 });
 
 // Route untuk menampilkan data Web

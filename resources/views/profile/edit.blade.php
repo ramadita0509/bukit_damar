@@ -21,12 +21,6 @@
           @include('profile.partials.update-password-form')
         </div>
       </div>
-
-      <div class="card shadow-sm border-0 border-danger">
-        <div class="card-body p-4">
-          @include('profile.partials.delete-user-form')
-        </div>
-      </div>
     </div>
   </div>
 
