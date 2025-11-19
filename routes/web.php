@@ -55,6 +55,37 @@ Route::get('/izin-usaha', function () {
 Route::get('/kontak', function () {
     return view('profile.frontend.kontak');
 });
+Route::get('/nikah', function () {
+    return view('profile.frontend.nikah');
+});
+Route::get('/nikah/download-pdf', function () {
+    $pdf = Pdf::loadView('pdf.nikah');
+    return $pdf->download('Informasi_Persyaratan_Surat_Nikah.pdf');
+})->name('nikah.download-pdf');
+Route::get('/blog/damar-sport-center', function () {
+    return view('profile.blog.dsc');
+})->name('blog.dsc');
+Route::get('/blog/masjid', function () {
+    return view('profile.blog.masjid');
+})->name('blog.masjid');
+Route::get('/blog/damar-park', function () {
+    return view('profile.blog.damar-park');
+})->name('blog.damar-park');
+Route::get('/blog/balai-warga', function () {
+    return view('profile.blog.balai-warga');
+})->name('blog.balai-warga');
+Route::get('/blog/meeting-point', function () {
+    return view('profile.blog.meeting-point');
+})->name('blog.meeting-point');
+Route::get('/blog/keamanan', function () {
+    return view('profile.blog.keamanan');
+})->name('blog.keamanan');
+Route::get('/kepengurusan', function () {
+    return view('profile.frontend.kepengurusan');
+})->name('kepengurusan');
+Route::get('/tentang', function () {
+    return view('profile.frontend.tentang');
+})->name('tentang');
 
 // Route untuk Transaksi Keuangan
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -9,17 +9,18 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="{{ url('/') }}" class="{{ Request::is('/') ? 'active' : '' }}">Beranda<br></a></li>
-        <li><a href="{{ url('/') }}#features">Visi & Misi</a></li>
-        <li><a href="{{ url('/') }}#team">Kepengurusan</a></li>
+        <li><a href="{{ url('/') }}#visi-misi">Visi & Misi</a></li>
+        <li><a href="{{ url('/kepengurusan') }}">Kepengurusan</a></li>
 
         <li class="dropdown">
           <a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li><a href="{{ url('/') }}">Masjid</a></li>
-            <li><a href="{{ url('/') }}">Damar Sport Center</a></li>
-            <li><a href="{{ url('/') }}">Damar Park</a></li>
-            <li><a href="{{ url('/') }}">Balai Warga</a></li>
-            <li><a href="{{ url('/') }}">Meeting Point</a></li>
+            <li><a href="{{ route('blog.masjid') }}" class="{{ Request::is('blog/masjid') ? 'active' : '' }}">Masjid</a></li>
+            <li><a href="{{ route('blog.dsc') }}" class="{{ Request::is('blog/damar-sport-center') ? 'active' : '' }}">Damar Sport Center</a></li>
+            <li><a href="{{ route('blog.damar-park') }}" class="{{ Request::is('blog/damar-park') ? 'active' : '' }}">Damar Park</a></li>
+            <li><a href="{{ route('blog.balai-warga') }}" class="{{ Request::is('blog/balai-warga') ? 'active' : '' }}">Balai Warga</a></li>
+            <li><a href="{{ route('blog.meeting-point') }}" class="{{ Request::is('blog/meeting-point') ? 'active' : '' }}">Meeting Point</a></li>
+            <li><a href="{{ route('blog.keamanan') }}" class="{{ Request::is('blog/keamanan') ? 'active' : '' }}">Keamanan</a></li>
           </ul>
         </li>
 
@@ -37,7 +38,7 @@
             </li>
             <li><a href="{{ url('/izin-usaha') }}" class="{{ Request::is('izin-usaha') ? 'active' : '' }}">Informasi Izin Usaha</a></li>
             <li><a href="{{ url('/skck') }}" class="{{ Request::is('skck') ? 'active' : '' }}">Informasi SKCK</a></li>
-            <li><a href="{{ url('/biaya-nikah') }}" class="{{ Request::is('biaya-nikah') ? 'active' : '' }}">Informasi Biaya Nikah</a></li>
+            <li><a href="{{ url('/nikah') }}" class="{{ Request::is('nikah') ? 'active' : '' }}">Informasi Surat Nikah</a></li>
           </ul>
         </li>
         <li><a href="{{ url('/kontak') }}" class="{{ Request::is('kontak') ? 'active' : '' }}">Kontak</a></li>
