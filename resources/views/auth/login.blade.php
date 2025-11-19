@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Login - Website Bukit Damar">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 

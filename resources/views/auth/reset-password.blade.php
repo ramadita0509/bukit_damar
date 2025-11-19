@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout title="Reset Password - Website Bukit Damar">
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
 

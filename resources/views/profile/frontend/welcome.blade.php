@@ -25,67 +25,123 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Features Section -->
+    <!-- Visi Misi Section -->
     <section id="features" class="features section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <p>Our Advacedd Features<br></p>
+        <h2>Visi & Misi</h2>
+        <p>Visi dan Misi RT 002 RW 017 Bukit Damar<br></p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-5">
+        <!-- Visi Section -->
+        <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12">
+            <div class="visi-misi-box p-4 mb-4" style="background: #f8f9fa; border-radius: 10px; border-left: 4px solid #0ea2e7;">
+              <h3 class="mb-3" style="color: #0ea2e7;">
+                <i class="bi bi-bullseye me-2"></i>Visi
+              </h3>
+              <div class="visi-content">
+                <p class="lead mb-3" style="font-weight: 600; color: #2c3e50;">
+                  Terwujudnya lingkungan RT yang rukun, aman, tertib, dan sejahtera.
+                </p>
+                <p class="mb-0" style="color: #555;">
+                  Mewujudkan lingkungan RT yang harmonis dan nyaman bagi seluruh warga.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Misi Section -->
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12">
+            <h3 class="mb-4" style="color: #0ea2e7;">
+              <i class="bi bi-list-check me-2"></i>Misi
+            </h3>
+          </div>
+        </div>
+
+        <div class="row gy-4">
 
           <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="{{ asset('assets/img/features.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/features.png') }}" class="img-fluid" alt="Visi Misi RT">
           </div>
 
           <div class="col-xl-6 d-flex">
             <div class="row align-self-center gy-4">
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Eos aspernatur rem</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-people-fill me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Menjaga Kerukunan</h4>
+                    <p style="color: #666; margin-bottom: 0;">Menjalin kerukunan antarwarga, umat beragama, dan bernegara melalui interaksi sosial dan kegiatan bersama.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Facilis neque ipsa</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-shield-check me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Keamanan & Kebersihan</h4>
+                    <p style="color: #666; margin-bottom: 0;">Meningkatkan kerja sama dalam menjaga dan memelihara kebersihan, keindahan, serta keamanan lingkungan.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Volup amet volupt</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-person-check-fill me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Pelayanan Publik</h4>
+                    <p style="color: #666; margin-bottom: 0;">Mewujudkan pelayanan kepada masyarakat yang jujur, adil, transparan, dan responsif.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Rerum omnis sint</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-hand-thumbs-up-fill me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Pemberdayaan Masyarakat</h4>
+                    <p style="color: #666; margin-bottom: 0;">Mendorong partisipasi aktif warga dalam kegiatan kemasyarakatan dan program pembangunan di wilayah RT.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Alias possimus</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-building me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Kemitraan dengan Pemerintah</h4>
+                    <p style="color: #666; margin-bottom: 0;">Membantu ketua RW dan pemerintah desa/kelurahan dalam mengumpulkan data, menyampaikan informasi, dan melaksanakan program.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
 
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Repellendus molli</h3>
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-graph-up-arrow me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Peningkatan Kesejahteraan</h4>
+                    <p style="color: #666; margin-bottom: 0;">Berupaya meningkatkan kesejahteraan warga melalui program-program yang relevan sesuai potensi lingkungan.</p>
+                  </div>
                 </div>
-              </div><!-- End Feature Item -->
+              </div><!-- End Misi Item -->
+
+              <div class="col-md-12" data-aos="fade-up" data-aos-delay="800">
+                <div class="feature-box d-flex align-items-start">
+                  <i class="bi bi-heart-fill me-3" style="color: #0ea2e7; font-size: 1.5rem; margin-top: 0.25rem;"></i>
+                  <div>
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Pelestarian Budaya</h4>
+                    <p style="color: #666; margin-bottom: 0;">Menjaga dan melestarikan nilai-nilai kekeluargaan dan gotong royong.</p>
+                  </div>
+                </div>
+              </div><!-- End Misi Item -->
 
             </div>
           </div>
@@ -94,80 +150,7 @@
 
       </div>
 
-    </section><!-- /Features Section -->
-
-    <!-- Alt Features Section -->
-    <section id="alt-features" class="alt-features section">
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="row align-self-center gy-5">
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-award"></i>
-                <div>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-card-checklist"></i>
-                <div>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-dribbble"></i>
-                <div>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-filter-circle"></i>
-                <div>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-lightning-charge"></i>
-                <div>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <i class="bi bi-patch-check"></i>
-                <div>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-            </div>
-
-          </div>
-
-          <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="{{ asset('assets/img/alt-features.png') }}" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Alt Features Section -->
+    </section><!-- /Visi Misi Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -424,8 +407,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Our hard working team</p>
+        <h2>Kepengurusan RT</h2>
+        <p>Kepengurusan RT 002 RW 017 Bukit Damar</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -444,9 +427,9 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                <h4>Fernando Sihombing</h4>
+                <span>Ketua RT</span>
+                <p>Saya adalah Ketua RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola data penduduk, pengaduan masyarakat, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -463,9 +446,9 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                <h4>Beben</h4>
+                <span>Sekertaris RT</span>
+                <p>Saya adalah Sekertaris RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola dokumen RT, mengelola data penduduk, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -482,9 +465,9 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                <h4>Sugeng</h4>
+                <span>Bendahara RT</span>
+                <p>Saya adalah Bendahara RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola keuangan RT, mengelola data keuangan, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -501,9 +484,161 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+                <h4>Nelson</h4>
+                <span>Humas RT</span>
+                <p>Saya adalah Humas RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola media sosial RT, mengelola data penduduk, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Danu</h4>
+                <span>Keamanan RT</span>
+                <p>Saya adalah Keamanan RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola keamanan RT, mengelola data keamanan, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Alief</h4>
+                <span>Sarana dan Prasarana RT</span>
+                <p>Saya adalah Sarana dan Prasarana RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola sarana dan prasarana RT, mengelola data sarana dan prasarana, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Andi M Sadli</h4>
+                <span>Kerohanian RT</span>
+                <p>Saya adalah Kerohanian RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola kerohanian RT, mengelola data kerohanian, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Suparmo</h4>
+                <span>Damar Sport Center</span>
+                <p>Saya adalah Damar Sport Center RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola Damar Sport Center, mengelola data Damar Sport Center, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Bayu</h4>
+                <span>Ekonomi Kreatif RT</span>
+                <p>Saya adalah Ekonomi Kreatif RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola ekonomi kreatif RT, mengelola data ekonomi kreatif, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sandi</h4>
+                <span>Lingkungan RT</span>
+                <p>Saya adalah Lingkungan RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola lingkungan RT, mengelola data lingkungan, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Rama</h4>
+                <span>Komdigi RT</span>
+                <p>Saya adalah Komdigi RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola komdigi RT, mengelola data komdigi, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Kevin</h4>
+                <span>Kepemudaan RT</span>
+                <p>Saya adalah Kepemudaan RT 002 RW 017 Desa Singajaya, Kecamatan Jonggol, Kabupaten Bogor. Saya bertugas untuk mengelola kepemudaan RT, mengelola data kepemudaan, dan melaksanakan kegiatan-kegiatan masyarakat.</p>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -513,119 +648,6 @@
       </div>
 
     </section><!-- /Team Section -->
-
-
-    <!-- Recent Posts Section -->
-    <section id="recent-posts" class="recent-posts section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Posts</h2>
-        <p>Recent posts form our Blog</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('assets/img/blog/blog-1.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6">
-            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('assets/img/blog/blog-2.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">July 17</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-item position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{ asset('assets/img/blog/blog-3.jpg') }}" class="img-fluid" alt="">
-                <span class="post-date">September 05</span>
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                  </div>
-                  <span class="px-3 text-black-50">/</span>
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                  </div>
-                </div>
-
-                <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </div>
-          </div><!-- End post item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Recent Posts Section -->
 
 
   </main>
