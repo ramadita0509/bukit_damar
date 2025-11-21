@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\LaporanIuranController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -25,6 +26,10 @@ Route::middleware('auth')->group(function () {
     // Route untuk manage users (hanya super admin)
     Route::middleware('role:super_admin')->group(function () {
         Route::get('/users', [ProfileController::class, 'index'])->name('users.index');
+        Route::get('/users/create', [ProfileController::class, 'create'])->name('users.create');
+        Route::post('/users', [ProfileController::class, 'store'])->name('users.store');
+        Route::get('/users/{user}/edit', [ProfileController::class, 'editUser'])->name('users.edit');
+        Route::put('/users/{user}', [ProfileController::class, 'updateUser'])->name('users.update');
         Route::delete('/users/{user}', [ProfileController::class, 'destroyUser'])->name('users.destroy');
     });
 });
@@ -33,6 +38,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/skck', function () {
     return view('profile.frontend.skck');
 });
+
 Route::get('/ktp', function () {
     return view('profile.frontend.ktp');
 });
@@ -40,21 +46,39 @@ Route::get('/ktp/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.ktp');
     return $pdf->download('Formulir_Permohonan_KTP.pdf');
 })->name('ktp.download-pdf');
+
 Route::get('/domisili', function () {
     return view('profile.frontend.domisili');
 });
+Route::get('/domisili/download-pdf', function () {
+    $pdf = Pdf::loadView('pdf.domisili');
+    return $pdf->download('Surat_Keterangan_Domisili.pdf');
+})->name('domisili.download-pdf');
+
 Route::get('/akta-lahir', function () {
     return view('profile.frontend.akta-lahir');
 });
+
 Route::get('/surat-kematian', function () {
     return view('profile.frontend.surat-kematian');
 });
+Route::get('/surat-kematian/download-pdf', function () {
+    $pdf = Pdf::loadView('pdf.surat-kematian');
+    return $pdf->download('Surat_Keterangan_Kematian.pdf');
+})->name('surat-kematian.download-pdf');
+
 Route::get('/izin-usaha', function () {
     return view('profile.frontend.izin-usaha');
 });
+Route::get('/izin-usaha/download-pdf', function () {
+    $pdf = Pdf::loadView('pdf.izin-usaha');
+    return $pdf->download('Surat_Keterangan_Izin_Usaha.pdf');
+})->name('izin-usaha.download-pdf');
+
 Route::get('/kontak', function () {
     return view('profile.frontend.kontak');
 });
+
 Route::get('/nikah', function () {
     return view('profile.frontend.nikah');
 });
@@ -62,30 +86,42 @@ Route::get('/nikah/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.nikah');
     return $pdf->download('Informasi_Persyaratan_Surat_Nikah.pdf');
 })->name('nikah.download-pdf');
-Route::get('/blog/damar-sport-center', function () {
-    return view('profile.blog.dsc');
-})->name('blog.dsc');
-Route::get('/blog/masjid', function () {
-    return view('profile.blog.masjid');
-})->name('blog.masjid');
-Route::get('/blog/damar-park', function () {
-    return view('profile.blog.damar-park');
-})->name('blog.damar-park');
-Route::get('/blog/balai-warga', function () {
-    return view('profile.blog.balai-warga');
-})->name('blog.balai-warga');
-Route::get('/blog/meeting-point', function () {
-    return view('profile.blog.meeting-point');
-})->name('blog.meeting-point');
-Route::get('/blog/keamanan', function () {
-    return view('profile.blog.keamanan');
-})->name('blog.keamanan');
+
+Route::get('/fasilitas/damar-sport-center', function () {
+    return view('profile.fasilitas.dsc');
+})->name('fasilitas.dsc');
+
+Route::get('/fasilitas/masjid', function () {
+    return view('profile.fasilitas.masjid');
+})->name('fasilitas.masjid');
+
+Route::get('/fasilitas/damar-park', function () {
+    return view('profile.fasilitas.damar-park');
+})->name('fasilitas.damar-park');
+
+Route::get('/fasilitas/balai-warga', function () {
+    return view('profile.fasilitas.balai-warga');
+})->name('fasilitas.balai-warga');
+
+Route::get('/fasilitas/meeting-point', function () {
+    return view('profile.fasilitas.meeting-point');
+})->name('fasilitas.meeting-point');
+
+Route::get('/fasilitas/keamanan', function () {
+    return view('profile.fasilitas.keamanan');
+})->name('fasilitas.keamanan');
+
 Route::get('/kepengurusan', function () {
     return view('profile.frontend.kepengurusan');
 })->name('kepengurusan');
+
 Route::get('/tentang', function () {
     return view('profile.frontend.tentang');
 })->name('tentang');
+
+// Route untuk Blog (Frontend)
+Route::get('/blog', [BlogController::class, 'frontend'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // Route untuk Transaksi Keuangan
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -110,6 +146,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/laporan-iuran', [LaporanIuranController::class, 'index'])->name('laporan-iuran.index');
         Route::post('/laporan-iuran', [LaporanIuranController::class, 'store'])->name('laporan-iuran.store');
         Route::delete('/laporan-iuran/{laporanIuran}', [LaporanIuranController::class, 'destroy'])->name('laporan-iuran.destroy');
+    });
+
+    // Route untuk Blog Management (Admin & Super Admin)
+    Route::middleware('role:admin,super_admin')->group(function () {
+        Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+        Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+        Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+        Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+        Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
+        Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     });
 });
 

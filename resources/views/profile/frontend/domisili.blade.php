@@ -97,8 +97,27 @@
               </div>
             </div>
           </div>
+        </div>
 
-      </div>
+        <!-- Lampiran Formulir -->
+         <div class="row mb-5">
+            <div class="col-lg-12">
+              <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                  <h3 class="mb-4"><i class="bi bi-file-earmark-text me-2"></i>Lampiran Formulir</h3>
+                  <p class="mb-4">Berikut adalah formulir yang dapat Anda download untuk keperluan pembuatan Surat Keterangan Domisili:</p>
+                  <div class="d-flex flex-wrap align-items-center gap-3">
+                    <a href="{{ route('domisili.download-pdf') }}" class="btn btn-primary btn-lg">
+                      <i class="bi bi-file-earmark-pdf me-2"></i>Download Surat Keterangan Domisili
+                    </a>
+                    <small class="text-muted">
+                      <i class="bi bi-filetype-pdf me-1"></i>Format: PDF
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     @push('styles')

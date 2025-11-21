@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Damar Park - Website Bukit Damar')
+@section('title', 'Balai Warga - Website Bukit Damar')
 
 @section('content')
 
@@ -9,8 +9,8 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1>Damar Park</h1>
-            <p class="lead">Area Rekreasi dan Ruang Terbuka Hijau untuk Keluarga</p>
+            <h1>Balai Warga</h1>
+            <p class="lead">Pusat Kegiatan Kemasyarakatan RT 002 RW 017</p>
           </div>
         </div>
       </div>
@@ -23,10 +23,10 @@
           <div class="col-lg-8">
             <article class="article">
               <div class="post-img text-center mb-4">
-                <img src="{{ asset('assets/img/features.png') }}" alt="Damar Park Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
+                <img src="{{ asset('assets/img/features.png') }}" alt="Balai Warga Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
               </div>
 
-              <h2 class="title">Damar Park: Ruang Rekreasi dan Interaksi Sosial Warga</h2>
+              <h2 class="title">Balai Warga: Pusat Kegiatan dan Koordinasi Masyarakat</h2>
 
               <div class="meta-top">
                 <ul>
@@ -36,148 +36,139 @@
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-clock"></i>
-                    <time datetime="2024-01-01">Setiap Hari</time>
+                    <time datetime="2024-01-01">Sesuai Jadwal</time>
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-calendar"></i>
-                    <time datetime="2024-01-01">Akses 24 Jam</time>
+                    <time datetime="2024-01-01">Kegiatan Rutin & Khusus</time>
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-tag"></i>
-                    <a href="#">Rekreasi</a>
+                    <a href="#">Kemasyarakatan</a>
                   </li>
                 </ul>
               </div>
 
               <div class="content">
                 <p class="lead">
-                  <strong>Damar Park</strong> merupakan area rekreasi dan ruang terbuka hijau yang menjadi salah satu fasilitas unggulan di lingkungan RT 002 RW 017 Bukit Damar. Taman ini dirancang sebagai tempat berkumpul, berolahraga ringan, dan berinteraksi sosial bagi seluruh warga, baik anak-anak, remaja, maupun orang dewasa.
+                  <strong>Balai Warga</strong> merupakan fasilitas penting di lingkungan RT 002 RW 017 Bukit Damar yang berfungsi sebagai pusat kegiatan kemasyarakatan, tempat pertemuan, dan koordinasi berbagai aktivitas warga. Balai ini menjadi simbol kebersamaan dan gotong royong warga dalam membangun lingkungan yang harmonis.
                 </p>
 
-                <h3>Fasilitas yang Tersedia</h3>
+                <h3>Fungsi dan Peran Balai Warga</h3>
 
-                <h4>Area Bermain Anak</h4>
+                <h4>Tempat Pertemuan Warga</h4>
                 <p>
-                  Damar Park dilengkapi dengan area bermain yang aman dan nyaman untuk anak-anak. Area ini dilengkapi dengan berbagai permainan yang dapat mengembangkan motorik dan kreativitas anak-anak sambil tetap dalam pengawasan orang tua.
+                  Balai Warga digunakan sebagai tempat pertemuan rutin warga untuk membahas berbagai hal terkait pembangunan lingkungan, koordinasi kegiatan, dan pengambilan keputusan bersama. Pertemuan ini biasanya diadakan secara berkala sesuai kebutuhan.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Wahana Permainan:</strong> Ayunan, perosotan, dan permainan edukatif lainnya</li>
-                  <li><strong>Keamanan:</strong> Permukaan yang aman dan ramah anak</li>
-                  <li><strong>Pengawasan:</strong> Area yang mudah diawasi oleh orang tua</li>
+                  <li><strong>Rapat RT:</strong> Pertemuan rutin pengurus dan warga RT</li>
+                  <li><strong>Musyawarah:</strong> Diskusi dan pengambilan keputusan bersama</li>
+                  <li><strong>Koordinasi:</strong> Koordinasi kegiatan kemasyarakatan</li>
                 </ul>
 
-                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #17a2b8; padding: 1rem; margin: 1.5rem 0;">
-                  <h5 style="color: #17a2b8; margin-bottom: 0.5rem;">
-                    <i class="bi bi-info-circle me-2"></i>Area Ramah Anak
+                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #6f42c1; padding: 1rem; margin: 1.5rem 0;">
+                  <h5 style="color: #6f42c1; margin-bottom: 0.5rem;">
+                    <i class="bi bi-info-circle me-2"></i>Partisipasi Warga
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Semua peralatan bermain di Damar Park dirancang dengan standar keamanan yang tinggi. Orang tua dapat dengan tenang mengawasi anak-anak mereka bermain sambil menikmati suasana taman yang asri.
+                    Semua warga RT 002 RW 017 Bukit Damar diundang untuk aktif berpartisipasi dalam berbagai pertemuan dan kegiatan di Balai Warga. Partisipasi aktif warga sangat penting untuk kemajuan lingkungan.
                   </p>
                 </div>
 
-                <h4>Jogging Track dan Area Olahraga</h4>
+                <h4>Kegiatan Kemasyarakatan</h4>
                 <p>
-                  Untuk warga yang gemar berolahraga, Damar Park menyediakan jogging track yang mengelilingi area taman. Track ini dapat digunakan untuk jogging, jalan santai, atau olahraga ringan lainnya di pagi atau sore hari.
+                  Balai Warga menjadi tempat penyelenggaraan berbagai kegiatan kemasyarakatan, mulai dari kegiatan sosial, pendidikan, hingga kegiatan pemberdayaan masyarakat. Kegiatan ini bertujuan untuk meningkatkan kesejahteraan dan kualitas hidup warga.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Jogging Track:</strong> Jalur lari yang mengelilingi taman</li>
-                  <li><strong>Area Olahraga:</strong> Tempat untuk senam pagi atau olahraga ringan</li>
-                  <li><strong>Waktu Terbaik:</strong> Pagi hari (06:00-08:00) dan sore hari (16:00-18:00)</li>
+                  <li><strong>Kegiatan Sosial:</strong> Bakti sosial, gotong royong, dan kegiatan amal</li>
+                  <li><strong>Pendidikan:</strong> Pelatihan, workshop, dan kegiatan edukatif</li>
+                  <li><strong>Pemberdayaan:</strong> Program pemberdayaan ekonomi dan sosial</li>
                 </ul>
 
-                <h3>Kegiatan yang Dapat Dilakukan</h3>
+                <h3>Kegiatan yang Diselenggarakan</h3>
 
-                <h4>Rekreasi Keluarga</h4>
+                <h4>Gotong Royong Lingkungan</h4>
                 <p>
-                  Damar Park menjadi tempat favorit untuk kegiatan rekreasi keluarga. Warga dapat mengajak keluarga untuk piknik, bermain bersama, atau sekadar menghabiskan waktu berkualitas di akhir pekan.
+                  Balai Warga menjadi pusat koordinasi kegiatan gotong royong untuk menjaga kebersihan dan keindahan lingkungan. Kegiatan ini melibatkan seluruh warga untuk bekerja sama dalam menjaga lingkungan tetap bersih dan tertib.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Piknik Keluarga:</strong> Area yang cocok untuk piknik bersama keluarga</li>
-                  <li><strong>Bermain Bersama:</strong> Tempat bermain yang aman untuk anak-anak</li>
-                  <li><strong>Foto Bersama:</strong> Spot foto yang menarik dengan pemandangan hijau</li>
+                  <li><strong>Kebersihan:</strong> Kerja bakti membersihkan lingkungan</li>
+                  <li><strong>Penghijauan:</strong> Penanaman pohon dan perawatan taman</li>
+                  <li><strong>Perbaikan:</strong> Perbaikan fasilitas umum bersama-sama</li>
                 </ul>
 
-                <h4>Kegiatan Komunitas</h4>
+                <h4>Kegiatan Hari Besar</h4>
                 <p>
-                  Selain untuk rekreasi pribadi, Damar Park juga sering digunakan untuk berbagai kegiatan komunitas warga, seperti senam bersama, kegiatan outbound, atau festival lingkungan.
+                  Balai Warga juga digunakan untuk menyelenggarakan perayaan hari besar nasional dan keagamaan. Kegiatan ini menjadi momen penting untuk mempererat tali silaturahmi antar warga.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Senam Bersama:</strong> Kegiatan senam pagi atau senam lansia</li>
-                  <li><strong>Outbound:</strong> Kegiatan team building untuk warga</li>
-                  <li><strong>Festival:</strong> Acara festival lingkungan atau hari besar nasional</li>
+                  <li><strong>Hari Kemerdekaan:</strong> Perayaan 17 Agustus dengan berbagai lomba</li>
+                  <li><strong>Hari Raya:</strong> Perayaan hari raya keagamaan bersama</li>
+                  <li><strong>Acara Khusus:</strong> Acara-acara khusus lainnya</li>
                 </ul>
 
-                <h3>Keunggulan Damar Park</h3>
+                <h3>Fasilitas Balai Warga</h3>
                 <p>
-                  Damar Park memiliki beberapa keunggulan yang membuatnya menjadi pilihan utama warga untuk beraktivitas:
+                  Balai Warga dilengkapi dengan berbagai fasilitas yang mendukung kegiatan kemasyarakatan:
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Lingkungan Asri:</strong> Taman yang hijau dan sejuk dengan pepohonan yang rindang</li>
-                  <li><strong>Akses Mudah:</strong> Lokasi yang strategis dan mudah dijangkau dari seluruh area RT</li>
-                  <li><strong>Fasilitas Lengkap:</strong> Dilengkapi dengan berbagai fasilitas pendukung</li>
-                  <li><strong>Keamanan:</strong> Area yang aman dan terawat dengan baik</li>
-                  <li><strong>Gratis:</strong> Akses gratis untuk semua warga RT 002 RW 017</li>
+                  <li>Ruang pertemuan yang luas dan nyaman</li>
+                  <li>Peralatan audio visual untuk presentasi</li>
+                  <li>Area parkir yang memadai</li>
+                  <li>Fasilitas pendukung lainnya</li>
+                </ul>
+
+                <h3>Manfaat untuk Warga</h3>
+                <p>
+                  Keberadaan Balai Warga memberikan banyak manfaat bagi warga RT 002 RW 017:
+                </p>
+                <ul style="line-height: 2;">
+                  <li><strong>Koordinasi:</strong> Memudahkan koordinasi kegiatan kemasyarakatan</li>
+                  <li><strong>Kebersamaan:</strong> Mempererat hubungan sosial antar warga</li>
+                  <li><strong>Pemberdayaan:</strong> Meningkatkan partisipasi warga dalam pembangunan</li>
+                  <li><strong>Efisiensi:</strong> Memudahkan penyelenggaraan berbagai kegiatan</li>
                 </ul>
 
                 <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
                   <h5 style="color: #28a745; margin-bottom: 0.5rem;">
-                    <i class="bi bi-check-circle me-2"></i>Manfaat untuk Warga
+                    <i class="bi bi-check-circle me-2"></i>Dukungan Pengurus RT
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Keberadaan Damar Park memberikan banyak manfaat bagi warga, mulai dari meningkatkan kualitas hidup, mempererat hubungan sosial antar warga, hingga menjadi tempat edukasi lingkungan bagi anak-anak.
-                  </p>
-                </div>
-
-                <h3>Perawatan dan Kebersihan</h3>
-                <p>
-                  Pengurus RT 002 RW 017 berkomitmen untuk menjaga dan merawat Damar Park agar tetap bersih, aman, dan nyaman untuk digunakan. Perawatan rutin dilakukan untuk memastikan semua fasilitas dalam kondisi baik dan area taman tetap hijau dan asri.
-                </p>
-
-                <h3>Dukungan Pengurus RT</h3>
-                <p>
-                  Damar Park didukung penuh oleh pengurus RT 002 RW 017 Bukit Damar sebagai bagian dari upaya meningkatkan kualitas hidup warga. Pengurus RT terus berupaya mengembangkan dan memperbaiki fasilitas di taman untuk memberikan pengalaman terbaik bagi warga.
-                </p>
-
-                <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
-                  <h5 style="color: #28a745; margin-bottom: 0.5rem;">
-                    <i class="bi bi-check-circle me-2"></i>Ayo Manfaatkan Damar Park!
-                  </h5>
-                  <p class="mb-0" style="color: #2c3e50;">
-                    Semua warga RT 002 RW 017 Bukit Damar diundang untuk memanfaatkan Damar Park sebagai tempat rekreasi dan interaksi sosial. Mari kita jaga kebersihan dan keamanan taman bersama-sama agar dapat dinikmati oleh semua warga.
+                    Pengurus RT 002 RW 017 berkomitmen untuk terus mengembangkan dan memaksimalkan fungsi Balai Warga sebagai pusat kegiatan kemasyarakatan yang dapat memberikan manfaat maksimal bagi seluruh warga.
                   </p>
                 </div>
 
                 <h3>Kontak Informasi</h3>
                 <p>
-                  Untuk informasi lebih lanjut mengenai Damar Park atau jika ingin mengadakan kegiatan di taman, silakan menghubungi:
+                  Untuk informasi lebih lanjut mengenai Balai Warga atau jika ingin menggunakan fasilitas untuk kegiatan, silakan menghubungi:
                 </p>
                 <ul style="line-height: 2;">
                   <li><strong>Pengurus RT 002 RW 017 Bukit Damar</strong></li>
-                  <li>Lokasi: Damar Park, RT 002 RW 017 Bukit Damar</li>
-                  <li>Akses: 24 Jam (dengan memperhatikan ketertiban umum)</li>
+                  <li>Lokasi: Balai Warga, RT 002 RW 017 Bukit Damar</li>
+                  <li>Penggunaan: Sesuai jadwal dan koordinasi dengan pengurus RT</li>
                 </ul>
 
                 <p class="mt-4">
-                  Mari bersama-sama kita jadikan Damar Park sebagai ruang publik yang nyaman, aman, dan bermanfaat bagi seluruh warga RT 002 RW 017 Bukit Damar!
+                  Mari bersama-sama kita manfaatkan Balai Warga sebagai sarana untuk membangun lingkungan yang lebih baik, harmonis, dan sejahtera!
                 </p>
               </div>
 
               <div class="meta-bottom">
                 <i class="bi bi-folder"></i>
                 <ul class="cats">
-                  <li><a href="#">Rekreasi</a></li>
-                  <li><a href="#">Taman</a></li>
+                  <li><a href="#">Kemasyarakatan</a></li>
                   <li><a href="#">Fasilitas</a></li>
+                  <li><a href="#">Pertemuan</a></li>
                 </ul>
 
                 <i class="bi bi-tags"></i>
                 <ul class="tags">
-                  <li><a href="#">Damar Park</a></li>
-                  <li><a href="#">Rekreasi</a></li>
-                  <li><a href="#">Taman</a></li>
-                  <li><a href="#">Olahraga</a></li>
-                  <li><a href="#">Keluarga</a></li>
-                  <li><a href="#">Komunitas</a></li>
+                  <li><a href="#">Balai Warga</a></li>
+                  <li><a href="#">Kemasyarakatan</a></li>
+                  <li><a href="#">Pertemuan</a></li>
+                  <li><a href="#">Gotong Royong</a></li>
+                  <li><a href="#">Koordinasi</a></li>
+                  <li><a href="#">Kegiatan</a></li>
                 </ul>
               </div>
 
@@ -262,7 +253,7 @@
                   <i class="bi bi-building me-2" style="color: #28a745;"></i>Fasilitas Lainnya
                 </h3>
                 <div class="mt-3">
-                  <a href="{{ route('blog.masjid') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.masjid') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #28a745; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#218838'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#28a745'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -283,7 +274,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #0ea2e7; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#0d6efd'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#0ea2e7'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -304,28 +295,28 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.balai-warga') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
-                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #6f42c1; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#5a32a3'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#6f42c1'">
+                  <a href="{{ route('fasilitas.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#138496'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#17a2b8'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
-                          <div style="width: 40px; height: 40px; background: #6f42c1; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-building-fill text-white"></i>
+                          <div style="width: 40px; height: 40px; background: #17a2b8; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-tree-fill text-white"></i>
                           </div>
                         </div>
                         <div class="flex-grow-1">
-                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Balai Warga</h4>
+                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Damar Park</h4>
                           <p style="font-size: 0.875rem; color: #6c757d; margin-bottom: 0;">
-                            <i class="bi bi-people me-1"></i>Kegiatan Masyarakat
+                            <i class="bi bi-flower1 me-1"></i>Area Rekreasi
                           </p>
                         </div>
                         <div class="flex-shrink-0">
-                          <i class="bi bi-arrow-right" style="color: #6f42c1;"></i>
+                          <i class="bi bi-arrow-right" style="color: #17a2b8;"></i>
                         </div>
                       </div>
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.meeting-point') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.meeting-point') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #dc3545; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#c82333'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#dc3545'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -346,7 +337,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.keamanan') }}" style="text-decoration: none; display: block;">
+                  <a href="{{ route('fasilitas.keamanan') }}" style="text-decoration: none; display: block;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #ffc107; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#e0a800'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#ffc107'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -372,12 +363,12 @@
               <div class="sidebar-item tags" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="sidebar-title mb-3" style="font-size: 1.25rem; font-weight: 600; color: #2c3e50; padding-bottom: 0.75rem; border-bottom: 2px solid #e9ecef;">Tags</h3>
                 <ul class="mt-3" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Damar Park</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Rekreasi</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Taman</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Olahraga</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Keluarga</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#17a2b8'; this.style.color='#fff'; this.style.borderColor='#17a2b8'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Komunitas</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Balai Warga</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Kemasyarakatan</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Pertemuan</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Gotong Royong</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Koordinasi</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Kegiatan</a></li>
                 </ul>
               </div>
             </div>

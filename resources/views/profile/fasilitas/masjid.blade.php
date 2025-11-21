@@ -267,7 +267,7 @@
                   <i class="bi bi-building me-2" style="color: #28a745;"></i>Fasilitas Lainnya
                 </h3>
                 <div class="mt-3">
-                  <a href="{{ route('blog.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #0ea2e7; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#0d6efd'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#0ea2e7'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -288,7 +288,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#138496'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#17a2b8'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -309,7 +309,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.balai-warga') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.balai-warga') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #6f42c1; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#5a32a3'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#6f42c1'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -330,7 +330,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.meeting-point') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.meeting-point') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #dc3545; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#c82333'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#dc3545'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -351,7 +351,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.keamanan') }}" style="text-decoration: none; display: block;">
+                  <a href="{{ route('fasilitas.keamanan') }}" style="text-decoration: none; display: block;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #ffc107; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#e0a800'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#ffc107'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">

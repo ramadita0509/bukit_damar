@@ -28,9 +28,14 @@
         <div class="card-header bg-white border-bottom">
           <div class="d-flex justify-content-between align-items-center">
             <h5 class="mb-0"><i class="bi bi-people me-2"></i>Daftar Users</h5>
-            <a href="{{ route('dashboard') }}" class="btn btn-sm btn-secondary">
-              <i class="bi bi-arrow-left me-1"></i>Kembali ke Dashboard
-            </a>
+            <div>
+              <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary me-2">
+                <i class="bi bi-plus-circle me-1"></i>Tambah User Baru
+              </a>
+              <a href="{{ route('dashboard') }}" class="btn btn-sm btn-secondary">
+                <i class="bi bi-arrow-left me-1"></i>Kembali ke Dashboard
+              </a>
+            </div>
           </div>
         </div>
         <div class="card-body p-0">
@@ -69,6 +74,9 @@
                     <td>{{ $user->created_at->format('d/m/Y') }}</td>
                     <td class="text-center">
                       @if($user->id !== Auth::id())
+                        <a href="{{ route('users.edit', $user) }}" class="btn btn-sm btn-warning" title="Edit User">
+                          <i class="bi bi-pencil"></i>
+                        </a>
                         <form action="{{ route('users.destroy', $user) }}" method="POST" class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus user {{ $user->name }}?');">
                           @csrf
                           @method('DELETE')

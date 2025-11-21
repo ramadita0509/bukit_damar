@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed blogs if needed
+        // $this->call(BlogSeeder::class);
     }
 }

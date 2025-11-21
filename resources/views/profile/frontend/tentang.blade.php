@@ -138,7 +138,7 @@
                       <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i>Shalat Tarawih (Ramadhan)</li>
                       <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i>Kegiatan Idul Adha & Kurban</li>
                     </ul>
-                    <a href="{{ route('blog.masjid') }}" class="btn btn-sm mt-3" style="background: #28a745; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
+                    <a href="{{ route('fasilitas.masjid') }}" class="btn btn-sm mt-3" style="background: #28a745; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
                       Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                   </div>
@@ -165,7 +165,7 @@
                       <li><i class="bi bi-check-circle me-2" style="color: #0ea2e7;"></i>Meningkatkan kebugaran dan kesehatan</li>
                       <li><i class="bi bi-check-circle me-2" style="color: #0ea2e7;"></i>Membangun sportivitas dan kerja sama tim</li>
                     </ul>
-                    <a href="{{ route('blog.dsc') }}" class="btn btn-sm mt-3" style="background: #0ea2e7; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
+                    <a href="{{ route('fasilitas.dsc') }}" class="btn btn-sm mt-3" style="background: #0ea2e7; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;">
                       Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                   </div>
@@ -236,7 +236,7 @@
 
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                  <a href="{{ route('blog.masjid') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.masjid') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#28a745'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #28a745; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-house-door-fill text-white" style="font-size: 2rem;"></i>
@@ -248,7 +248,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                  <a href="{{ route('blog.dsc') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.dsc') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#0ea2e7'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #0ea2e7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-trophy text-white" style="font-size: 2rem;"></i>
@@ -260,7 +260,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                  <a href="{{ route('blog.damar-park') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.damar-park') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#17a2b8'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #17a2b8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-tree-fill text-white" style="font-size: 2rem;"></i>
@@ -272,7 +272,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                  <a href="{{ route('blog.balai-warga') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.balai-warga') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#6f42c1'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #6f42c1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-building-fill text-white" style="font-size: 2rem;"></i>
@@ -284,7 +284,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <a href="{{ route('blog.meeting-point') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.meeting-point') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#dc3545'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #dc3545; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-geo-alt-fill text-white" style="font-size: 2rem;"></i>
@@ -296,7 +296,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                  <a href="{{ route('blog.keamanan') }}" style="text-decoration: none; color: inherit;">
+                  <a href="{{ route('fasilitas.keamanan') }}" style="text-decoration: none; color: inherit;">
                     <div class="facility-card p-4 text-center" style="background: #f8f9fa; border-radius: 10px; height: 100%; transition: all 0.3s; border: 2px solid transparent;" onmouseover="this.style.borderColor='#ffc107'; this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                       <div style="width: 70px; height: 70px; background: #ffc107; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="bi bi-shield-check text-white" style="font-size: 2rem;"></i>

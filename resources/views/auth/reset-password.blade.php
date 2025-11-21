@@ -1,79 +1,198 @@
-<x-guest-layout title="Reset Password - Website Bukit Damar">
-    <form method="POST" action="{{ route('password.store') }}">
-        @csrf
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Password Reset Token -->
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Reset Password - Website Bukit Damar</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+</head>
+
+<body class="index-page" style="background: #f8f9fa; min-height: 100vh; display: flex; align-items: center;">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <!-- Logo Section -->
+        <div class="text-center mb-4">
+          <a href="{{ url('/') }}" class="d-inline-block text-decoration-none">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo Bukit Damar" style="max-height: 80px; margin-bottom: 15px;">
+            <h3 class="mb-1" style="color: #2c3e50; font-weight: 600;">Website Bukit Damar</h3>
+            <p class="text-muted mb-0" style="font-size: 14px;">Cluster Bukit Damar Citra Indah City</p>
+          </a>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <div class="relative">
-                <x-text-input id="password" class="block mt-1 w-full pr-10" type="password" name="password" required autocomplete="new-password" />
-                <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 focus:outline-none">
+        <!-- Reset Password Card -->
+        <div class="card shadow-sm border-0">
+          <div class="card-header bg-white border-bottom">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="mb-0"><i class="bi bi-shield-lock me-2"></i>Reset Password</h5>
+              <a href="{{ route('login') }}" class="btn btn-sm btn-secondary">
+                <i class="bi bi-arrow-left me-1"></i>Kembali ke Login
+              </a>
+            </div>
+          </div>
+          <div class="card-body p-4">
+            <form method="POST" action="{{ route('password.store') }}">
+              @csrf
+
+              <!-- Password Reset Token -->
+              <input type="hidden" name="token" value="{{ $request->route('token') }}">
+
+              @if($errors->any())
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <i class="bi bi-exclamation-triangle me-2"></i>
+                  <ul class="mb-0">
+                    @foreach($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              @endif
+
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email"
+                       class="form-control @error('email') is-invalid @enderror"
+                       id="email"
+                       name="email"
+                       value="{{ old('email', $request->email) }}"
+                       required
+                       autofocus
+                       autocomplete="username"
+                       placeholder="contoh@email.com">
+                @error('email')
+                  <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password Baru <span class="text-danger">*</span></label>
+                <div class="position-relative">
+                  <input type="password"
+                         class="form-control @error('password') is-invalid @enderror"
+                         id="password"
+                         name="password"
+                         required
+                         autocomplete="new-password"
+                         placeholder="Masukkan password baru">
+                  <button type="button"
+                          id="togglePassword"
+                          class="btn btn-link position-absolute end-0 top-50 translate-middle-y pe-3 text-decoration-none"
+                          style="border: none; background: none;">
                     <i class="bi bi-eye" id="iconPassword"></i>
-                </button>
-            </div>
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+                  </button>
+                </div>
+                @error('password')
+                  <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+                <small class="text-muted">Minimal 8 karakter</small>
+              </div>
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <div class="relative">
-                <x-text-input id="password_confirmation" class="block mt-1 w-full pr-10"
-                                    type="password"
-                                    name="password_confirmation" required autocomplete="new-password" />
-                <button type="button" id="togglePasswordConfirmation" class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700 focus:outline-none">
+              <!-- Confirm Password -->
+              <div class="mb-4">
+                <label for="password_confirmation" class="form-label">Konfirmasi Password Baru <span class="text-danger">*</span></label>
+                <div class="position-relative">
+                  <input type="password"
+                         class="form-control @error('password_confirmation') is-invalid @enderror"
+                         id="password_confirmation"
+                         name="password_confirmation"
+                         required
+                         autocomplete="new-password"
+                         placeholder="Konfirmasi password baru">
+                  <button type="button"
+                          id="togglePasswordConfirmation"
+                          class="btn btn-link position-absolute end-0 top-50 translate-middle-y pe-3 text-decoration-none"
+                          style="border: none; background: none;">
                     <i class="bi bi-eye" id="iconPasswordConfirmation"></i>
+                  </button>
+                </div>
+                @error('password_confirmation')
+                  <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-shield-check me-2"></i>Reset Password
                 </button>
-            </div>
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+              </div>
+            </form>
+          </div>
         </div>
 
-        <script>
-            // Toggle Password
-            document.getElementById('togglePassword').addEventListener('click', function() {
-                const passwordField = document.getElementById('password');
-                const icon = document.getElementById('iconPassword');
-                if (passwordField.type === 'password') {
-                    passwordField.type = 'text';
-                    icon.classList.remove('bi-eye');
-                    icon.classList.add('bi-eye-slash');
-                } else {
-                    passwordField.type = 'password';
-                    icon.classList.remove('bi-eye-slash');
-                    icon.classList.add('bi-eye');
-                }
-            });
-
-            // Toggle Password Confirmation
-            document.getElementById('togglePasswordConfirmation').addEventListener('click', function() {
-                const passwordField = document.getElementById('password_confirmation');
-                const icon = document.getElementById('iconPasswordConfirmation');
-                if (passwordField.type === 'password') {
-                    passwordField.type = 'text';
-                    icon.classList.remove('bi-eye');
-                    icon.classList.add('bi-eye-slash');
-                } else {
-                    passwordField.type = 'password';
-                    icon.classList.remove('bi-eye-slash');
-                    icon.classList.add('bi-eye');
-                }
-            });
-        </script>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Reset Password') }}
-            </x-primary-button>
+        <!-- Footer -->
+        <div class="text-center mt-4">
+          <p class="text-muted mb-0" style="font-size: 14px;">
+            &copy; {{ date('Y') }} Website Bukit Damar. All rights reserved.
+          </p>
         </div>
-    </form>
-</x-guest-layout>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+
+  <script>
+    // Toggle Password
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const passwordField = document.getElementById('password');
+      const icon = document.getElementById('iconPassword');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      } else {
+        passwordField.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      }
+    });
+
+    // Toggle Password Confirmation
+    document.getElementById('togglePasswordConfirmation').addEventListener('click', function() {
+      const passwordField = document.getElementById('password_confirmation');
+      const icon = document.getElementById('iconPasswordConfirmation');
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      } else {
+        passwordField.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

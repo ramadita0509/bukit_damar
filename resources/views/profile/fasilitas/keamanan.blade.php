@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Balai Warga - Website Bukit Damar')
+@section('title', 'Sistem Keamanan - Website Bukit Damar')
 
 @section('content')
 
@@ -9,8 +9,8 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1>Balai Warga</h1>
-            <p class="lead">Pusat Kegiatan Kemasyarakatan RT 002 RW 017</p>
+            <h1>Sistem Keamanan</h1>
+            <p class="lead">Keamanan dan Ketertiban Lingkungan RT 002 RW 017</p>
           </div>
         </div>
       </div>
@@ -23,10 +23,10 @@
           <div class="col-lg-8">
             <article class="article">
               <div class="post-img text-center mb-4">
-                <img src="{{ asset('assets/img/features.png') }}" alt="Balai Warga Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
+                <img src="{{ asset('assets/img/features.png') }}" alt="Sistem Keamanan Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
               </div>
 
-              <h2 class="title">Balai Warga: Pusat Kegiatan dan Koordinasi Masyarakat</h2>
+              <h2 class="title">Sistem Keamanan: Menjaga Keamanan dan Ketertiban Lingkungan</h2>
 
               <div class="meta-top">
                 <ul>
@@ -36,139 +36,149 @@
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-clock"></i>
-                    <time datetime="2024-01-01">Sesuai Jadwal</time>
+                    <time datetime="2024-01-01">24 Jam</time>
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-calendar"></i>
-                    <time datetime="2024-01-01">Kegiatan Rutin & Khusus</time>
+                    <time datetime="2024-01-01">Pengawasan Terpadu</time>
                   </li>
                   <li class="d-flex align-items-center">
                     <i class="bi bi-tag"></i>
-                    <a href="#">Kemasyarakatan</a>
+                    <a href="#">Keamanan</a>
                   </li>
                 </ul>
               </div>
 
               <div class="content">
                 <p class="lead">
-                  <strong>Balai Warga</strong> merupakan fasilitas penting di lingkungan RT 002 RW 017 Bukit Damar yang berfungsi sebagai pusat kegiatan kemasyarakatan, tempat pertemuan, dan koordinasi berbagai aktivitas warga. Balai ini menjadi simbol kebersamaan dan gotong royong warga dalam membangun lingkungan yang harmonis.
+                  <strong>Sistem Keamanan</strong> di lingkungan RT 002 RW 017 Bukit Damar dirancang untuk memberikan perlindungan dan rasa aman bagi seluruh warga. Sistem keamanan yang terintegrasi ini melibatkan berbagai komponen, mulai dari pengawasan, patroli, hingga koordinasi dengan pihak terkait untuk memastikan lingkungan tetap aman dan tertib.
                 </p>
 
-                <h3>Fungsi dan Peran Balai Warga</h3>
+                <h3>Komponen Sistem Keamanan</h3>
 
-                <h4>Tempat Pertemuan Warga</h4>
+                <h4>Pengawasan 24 Jam</h4>
                 <p>
-                  Balai Warga digunakan sebagai tempat pertemuan rutin warga untuk membahas berbagai hal terkait pembangunan lingkungan, koordinasi kegiatan, dan pengambilan keputusan bersama. Pertemuan ini biasanya diadakan secara berkala sesuai kebutuhan.
+                  Sistem keamanan di RT 002 RW 017 dilengkapi dengan pengawasan yang berjalan 24 jam untuk memastikan keamanan lingkungan. Pengawasan ini dilakukan secara terpadu dengan melibatkan berbagai elemen keamanan.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Rapat RT:</strong> Pertemuan rutin pengurus dan warga RT</li>
-                  <li><strong>Musyawarah:</strong> Diskusi dan pengambilan keputusan bersama</li>
-                  <li><strong>Koordinasi:</strong> Koordinasi kegiatan kemasyarakatan</li>
+                  <li><strong>Patroli Rutin:</strong> Patroli keamanan secara berkala di seluruh area RT</li>
+                  <li><strong>Pengawasan:</strong> Pengawasan terhadap aktivitas mencurigakan</li>
+                  <li><strong>Koordinasi:</strong> Koordinasi dengan warga dan pihak terkait</li>
                 </ul>
 
-                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #6f42c1; padding: 1rem; margin: 1.5rem 0;">
-                  <h5 style="color: #6f42c1; margin-bottom: 0.5rem;">
-                    <i class="bi bi-info-circle me-2"></i>Partisipasi Warga
+                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0;">
+                  <h5 style="color: #ffc107; margin-bottom: 0.5rem;">
+                    <i class="bi bi-info-circle me-2"></i>Keamanan Terpadu
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Semua warga RT 002 RW 017 Bukit Damar diundang untuk aktif berpartisipasi dalam berbagai pertemuan dan kegiatan di Balai Warga. Partisipasi aktif warga sangat penting untuk kemajuan lingkungan.
+                    Sistem keamanan di RT 002 RW 017 dirancang secara terpadu dengan melibatkan seluruh elemen, mulai dari pengurus RT, satpam, hingga partisipasi aktif warga dalam menjaga keamanan lingkungan.
                   </p>
                 </div>
 
-                <h4>Kegiatan Kemasyarakatan</h4>
+                <h4>Satpam dan Petugas Keamanan</h4>
                 <p>
-                  Balai Warga menjadi tempat penyelenggaraan berbagai kegiatan kemasyarakatan, mulai dari kegiatan sosial, pendidikan, hingga kegiatan pemberdayaan masyarakat. Kegiatan ini bertujuan untuk meningkatkan kesejahteraan dan kualitas hidup warga.
+                  RT 002 RW 017 dilengkapi dengan satpam dan petugas keamanan yang bertugas menjaga keamanan lingkungan. Petugas keamanan ini bekerja secara profesional untuk memastikan lingkungan tetap aman dan tertib.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Kegiatan Sosial:</strong> Bakti sosial, gotong royong, dan kegiatan amal</li>
-                  <li><strong>Pendidikan:</strong> Pelatihan, workshop, dan kegiatan edukatif</li>
-                  <li><strong>Pemberdayaan:</strong> Program pemberdayaan ekonomi dan sosial</li>
+                  <li><strong>Satpam:</strong> Petugas keamanan yang bertugas menjaga lingkungan</li>
+                  <li><strong>Patroli:</strong> Patroli rutin di seluruh area RT</li>
+                  <li><strong>Respon Cepat:</strong> Respon cepat terhadap insiden keamanan</li>
                 </ul>
 
-                <h3>Kegiatan yang Diselenggarakan</h3>
+                <h3>Program Keamanan</h3>
 
-                <h4>Gotong Royong Lingkungan</h4>
+                <h4>Siskamling (Sistem Keamanan Lingkungan)</h4>
                 <p>
-                  Balai Warga menjadi pusat koordinasi kegiatan gotong royong untuk menjaga kebersihan dan keindahan lingkungan. Kegiatan ini melibatkan seluruh warga untuk bekerja sama dalam menjaga lingkungan tetap bersih dan tertib.
+                  RT 002 RW 017 mengimplementasikan program Siskamling yang melibatkan partisipasi aktif warga dalam menjaga keamanan lingkungan. Program ini bertujuan untuk menciptakan lingkungan yang aman melalui gotong royong warga.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Kebersihan:</strong> Kerja bakti membersihkan lingkungan</li>
-                  <li><strong>Penghijauan:</strong> Penanaman pohon dan perawatan taman</li>
-                  <li><strong>Perbaikan:</strong> Perbaikan fasilitas umum bersama-sama</li>
+                  <li><strong>Ronda:</strong> Kegiatan ronda warga secara bergiliran</li>
+                  <li><strong>Koordinasi:</strong> Koordinasi antar warga dalam menjaga keamanan</li>
+                  <li><strong>Komunikasi:</strong> Komunikasi cepat untuk informasi keamanan</li>
                 </ul>
 
-                <h4>Kegiatan Hari Besar</h4>
+                <h4>Pengawasan Akses Masuk</h4>
                 <p>
-                  Balai Warga juga digunakan untuk menyelenggarakan perayaan hari besar nasional dan keagamaan. Kegiatan ini menjadi momen penting untuk mempererat tali silaturahmi antar warga.
+                  Sistem keamanan juga mencakup pengawasan terhadap akses masuk ke lingkungan RT. Pengawasan ini dilakukan untuk memastikan hanya warga dan tamu yang sah yang dapat masuk ke lingkungan.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Hari Kemerdekaan:</strong> Perayaan 17 Agustus dengan berbagai lomba</li>
-                  <li><strong>Hari Raya:</strong> Perayaan hari raya keagamaan bersama</li>
-                  <li><strong>Acara Khusus:</strong> Acara-acara khusus lainnya</li>
+                  <li><strong>Pos Jaga:</strong> Pos jaga di pintu masuk utama</li>
+                  <li><strong>Pencatatan:</strong> Pencatatan tamu yang masuk ke lingkungan</li>
+                  <li><strong>Pengawasan:</strong> Pengawasan terhadap kendaraan masuk dan keluar</li>
                 </ul>
 
-                <h3>Fasilitas Balai Warga</h3>
+                <h3>Fasilitas Keamanan</h3>
                 <p>
-                  Balai Warga dilengkapi dengan berbagai fasilitas yang mendukung kegiatan kemasyarakatan:
+                  Sistem keamanan dilengkapi dengan berbagai fasilitas pendukung:
                 </p>
                 <ul style="line-height: 2;">
-                  <li>Ruang pertemuan yang luas dan nyaman</li>
-                  <li>Peralatan audio visual untuk presentasi</li>
-                  <li>Area parkir yang memadai</li>
+                  <li>Pos jaga keamanan di lokasi strategis</li>
+                  <li>Peralatan komunikasi untuk koordinasi</li>
+                  <li>Sistem pencahayaan yang memadai</li>
                   <li>Fasilitas pendukung lainnya</li>
                 </ul>
 
-                <h3>Manfaat untuk Warga</h3>
+                <h3>Peran Warga dalam Keamanan</h3>
                 <p>
-                  Keberadaan Balai Warga memberikan banyak manfaat bagi warga RT 002 RW 017:
+                  Keamanan lingkungan tidak hanya menjadi tanggung jawab petugas keamanan, tetapi juga menjadi tanggung jawab bersama seluruh warga. Partisipasi aktif warga sangat penting untuk menciptakan lingkungan yang aman dan tertib.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Koordinasi:</strong> Memudahkan koordinasi kegiatan kemasyarakatan</li>
-                  <li><strong>Kebersamaan:</strong> Mempererat hubungan sosial antar warga</li>
-                  <li><strong>Pemberdayaan:</strong> Meningkatkan partisipasi warga dalam pembangunan</li>
-                  <li><strong>Efisiensi:</strong> Memudahkan penyelenggaraan berbagai kegiatan</li>
+                  <li><strong>Kewaspadaan:</strong> Warga diharapkan selalu waspada terhadap aktivitas mencurigakan</li>
+                  <li><strong>Pelaporan:</strong> Segera melaporkan kejadian mencurigakan kepada petugas keamanan</li>
+                  <li><strong>Partisipasi:</strong> Aktif berpartisipasi dalam program keamanan lingkungan</li>
+                  <li><strong>Kepatuhan:</strong> Mematuhi peraturan keamanan yang berlaku</li>
                 </ul>
 
                 <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
                   <h5 style="color: #28a745; margin-bottom: 0.5rem;">
-                    <i class="bi bi-check-circle me-2"></i>Dukungan Pengurus RT
+                    <i class="bi bi-check-circle me-2"></i>Keamanan Bersama
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Pengurus RT 002 RW 017 berkomitmen untuk terus mengembangkan dan memaksimalkan fungsi Balai Warga sebagai pusat kegiatan kemasyarakatan yang dapat memberikan manfaat maksimal bagi seluruh warga.
+                    Keamanan lingkungan adalah tanggung jawab bersama. Mari kita semua berpartisipasi aktif dalam menjaga keamanan dan ketertiban lingkungan RT 002 RW 017 Bukit Damar.
                   </p>
                 </div>
 
+                <h3>Koordinasi dengan Pihak Terkait</h3>
+                <p>
+                  Sistem keamanan di RT 002 RW 017 juga melakukan koordinasi dengan pihak-pihak terkait, seperti kepolisian setempat, untuk memastikan keamanan lingkungan dapat terjaga dengan baik. Koordinasi ini dilakukan secara rutin dan berkelanjutan.
+                </p>
+
+                <h3>Dukungan Pengurus RT</h3>
+                <p>
+                  Pengurus RT 002 RW 017 berkomitmen untuk terus meningkatkan dan mengembangkan sistem keamanan lingkungan. Pengurus RT terus berupaya memastikan semua komponen keamanan berfungsi dengan baik dan dapat memberikan perlindungan maksimal bagi warga.
+                </p>
+
                 <h3>Kontak Informasi</h3>
                 <p>
-                  Untuk informasi lebih lanjut mengenai Balai Warga atau jika ingin menggunakan fasilitas untuk kegiatan, silakan menghubungi:
+                  Untuk informasi lebih lanjut mengenai sistem keamanan atau jika ada hal yang perlu dilaporkan, silakan menghubungi:
                 </p>
                 <ul style="line-height: 2;">
                   <li><strong>Pengurus RT 002 RW 017 Bukit Damar</strong></li>
-                  <li>Lokasi: Balai Warga, RT 002 RW 017 Bukit Damar</li>
-                  <li>Penggunaan: Sesuai jadwal dan koordinasi dengan pengurus RT</li>
+                  <li><strong>Petugas Keamanan RT 002 RW 017</strong></li>
+                  <li>Pos Jaga: Pintu Masuk Utama RT 002 RW 017</li>
                 </ul>
 
                 <p class="mt-4">
-                  Mari bersama-sama kita manfaatkan Balai Warga sebagai sarana untuk membangun lingkungan yang lebih baik, harmonis, dan sejahtera!
+                  Mari bersama-sama kita jaga keamanan dan ketertiban lingkungan RT 002 RW 017 Bukit Damar untuk menciptakan lingkungan yang aman, nyaman, dan sejahtera bagi seluruh warga!
                 </p>
               </div>
 
               <div class="meta-bottom">
                 <i class="bi bi-folder"></i>
                 <ul class="cats">
-                  <li><a href="#">Kemasyarakatan</a></li>
+                  <li><a href="#">Keamanan</a></li>
                   <li><a href="#">Fasilitas</a></li>
-                  <li><a href="#">Pertemuan</a></li>
+                  <li><a href="#">Pengawasan</a></li>
                 </ul>
 
                 <i class="bi bi-tags"></i>
                 <ul class="tags">
-                  <li><a href="#">Balai Warga</a></li>
-                  <li><a href="#">Kemasyarakatan</a></li>
-                  <li><a href="#">Pertemuan</a></li>
-                  <li><a href="#">Gotong Royong</a></li>
-                  <li><a href="#">Koordinasi</a></li>
-                  <li><a href="#">Kegiatan</a></li>
+                  <li><a href="#">Keamanan</a></li>
+                  <li><a href="#">Siskamling</a></li>
+                  <li><a href="#">Patroli</a></li>
+                  <li><a href="#">Pengawasan</a></li>
+                  <li><a href="#">Ketertiban</a></li>
+                  <li><a href="#">Perlindungan</a></li>
                 </ul>
               </div>
 
@@ -253,7 +263,7 @@
                   <i class="bi bi-building me-2" style="color: #28a745;"></i>Fasilitas Lainnya
                 </h3>
                 <div class="mt-3">
-                  <a href="{{ route('blog.masjid') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.masjid') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #28a745; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#218838'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#28a745'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -274,7 +284,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #0ea2e7; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#0d6efd'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#0ea2e7'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -295,7 +305,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                  <a href="{{ route('fasilitas.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#138496'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#17a2b8'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -316,43 +326,22 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('blog.meeting-point') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
-                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #dc3545; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#c82333'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#dc3545'">
+                  <a href="{{ route('fasilitas.balai-warga') }}" style="text-decoration: none; display: block;">
+                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #6f42c1; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#5a32a3'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#6f42c1'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
-                          <div style="width: 40px; height: 40px; background: #dc3545; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-geo-alt-fill text-white"></i>
+                          <div style="width: 40px; height: 40px; background: #6f42c1; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-building-fill text-white"></i>
                           </div>
                         </div>
                         <div class="flex-grow-1">
-                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Meeting Point</h4>
+                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Balai Warga</h4>
                           <p style="font-size: 0.875rem; color: #6c757d; margin-bottom: 0;">
-                            <i class="bi bi-pin-map me-1"></i>Titik Kumpul
+                            <i class="bi bi-people me-1"></i>Kegiatan Masyarakat
                           </p>
                         </div>
                         <div class="flex-shrink-0">
-                          <i class="bi bi-arrow-right" style="color: #dc3545;"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="{{ route('blog.keamanan') }}" style="text-decoration: none; display: block;">
-                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #ffc107; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#e0a800'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#ffc107'">
-                      <div class="d-flex align-items-start">
-                        <div class="flex-shrink-0 me-3">
-                          <div style="width: 40px; height: 40px; background: #ffc107; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-shield-check text-white"></i>
-                          </div>
-                        </div>
-                        <div class="flex-grow-1">
-                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Keamanan</h4>
-                          <p style="font-size: 0.875rem; color: #6c757d; margin-bottom: 0;">
-                            <i class="bi bi-shield-fill me-1"></i>Sistem Keamanan
-                          </p>
-                        </div>
-                        <div class="flex-shrink-0">
-                          <i class="bi bi-arrow-right" style="color: #ffc107;"></i>
+                          <i class="bi bi-arrow-right" style="color: #6f42c1;"></i>
                         </div>
                       </div>
                     </div>
@@ -363,12 +352,12 @@
               <div class="sidebar-item tags" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="sidebar-title mb-3" style="font-size: 1.25rem; font-weight: 600; color: #2c3e50; padding-bottom: 0.75rem; border-bottom: 2px solid #e9ecef;">Tags</h3>
                 <ul class="mt-3" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Balai Warga</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Kemasyarakatan</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Pertemuan</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Gotong Royong</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Koordinasi</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#6f42c1'; this.style.color='#fff'; this.style.borderColor='#6f42c1'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Kegiatan</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Keamanan</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Siskamling</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Patroli</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Pengawasan</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Ketertiban</a></li>
+                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Perlindungan</a></li>
                 </ul>
               </div>
             </div>
