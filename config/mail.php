@@ -115,4 +115,16 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Email Address
+    |--------------------------------------------------------------------------
+    |
+    | This email address will receive contact form submissions and newsletter
+    | subscriptions. You can override this in your .env file.
+    |
+    */
+
+    'contact_email' => env('MAIL_CONTACT_EMAIL', env('MAIL_FROM_ADDRESS', 'contact@example.com')),
+
 ];

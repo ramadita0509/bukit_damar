@@ -22,7 +22,7 @@ class BlogController extends Controller
 
         $blogs = Blog::with('user')->orderBy('created_at', 'desc')->get();
 
-        return view('profile.blogs.index', [
+        return view('profile.backend.blogs.index', [
             'blogs' => $blogs,
         ]);
     }
@@ -64,7 +64,7 @@ class BlogController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profile.blogs.create');
+        return view('profile.backend.blogs.create');
     }
 
     /**
@@ -138,7 +138,7 @@ class BlogController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profile.blogs.edit', [
+        return view('profile.backend.blogs.edit', [
             'blog' => $blog,
         ]);
     }
@@ -210,5 +210,31 @@ class BlogController extends Controller
 
         return redirect()->route('blogs.index')
             ->with('success', 'Blog berhasil dihapus!');
+    }
+
+    /**
+     * Upload image from Summernote editor
+     */
+    public function uploadImage(Request $request)
+    {
+        if (!Auth::user()->isAdminOrSuperAdmin()) {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        $request->validate([
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120', // max 5MB
+        ]);
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('blog-images', $fileName, 'public');
+
+            return response()->json([
+                'url' => Storage::url($path)
+            ]);
+        }
+
+        return response()->json(['error' => 'No file uploaded'], 400);
     }
 }

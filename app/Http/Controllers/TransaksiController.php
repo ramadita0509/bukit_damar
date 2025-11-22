@@ -153,7 +153,7 @@ class TransaksiController extends Controller
             ->orderBy('bulan', 'desc')
             ->get();
 
-        return view('profile.frontend.laporan', compact('transaksi', 'totalPemasukan', 'totalPengeluaran', 'saldo', 'bulan', 'tahun', 'laporanIuran'));
+        return view('profile.frontend.informasi.laporan', compact('transaksi', 'totalPemasukan', 'totalPengeluaran', 'saldo', 'bulan', 'tahun', 'laporanIuran'));
     }
 
     /**

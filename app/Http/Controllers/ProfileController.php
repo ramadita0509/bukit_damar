@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
@@ -19,7 +20,7 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        return view('profile.edit', [
+        return view('profile.backend.edit', [
             'user' => $request->user(),
         ]);
     }
@@ -29,13 +30,27 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $user = $request->user();
+        $user->fill($request->validated());
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
         }
 
-        $request->user()->save();
+        // Upload foto profil jika ada
+        if ($request->hasFile('foto_profil')) {
+            // Hapus foto lama jika ada
+            if ($user->foto_profil && Storage::disk('public')->exists($user->foto_profil)) {
+                Storage::disk('public')->delete($user->foto_profil);
+            }
+
+            $file = $request->file('foto_profil');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('profile-photos', $fileName, 'public');
+            $user->foto_profil = $path;
+        }
+
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
@@ -72,7 +87,7 @@ class ProfileController extends Controller
 
         $users = User::orderBy('created_at', 'desc')->get();
 
-        return view('profile.users.index', [
+        return view('profile.backend.users.index', [
             'users' => $users,
         ]);
     }
@@ -86,7 +101,7 @@ class ProfileController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profile.users.create');
+        return view('profile.backend.users.create');
     }
 
     /**
@@ -125,7 +140,7 @@ class ProfileController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
-        return view('profile.users.edit', [
+        return view('profile.backend.users.edit', [
             'user' => $user,
         ]);
     }

@@ -24,12 +24,11 @@
           <div class="row gy-4">
 
             <div class="col-lg-6">
-
               <div class="row gy-4">
                 <div class="col-md-6">
                   <div class="info-item" data-aos="fade" data-aos-delay="200">
                     <i class="bi bi-geo-alt"></i>
-                    <h3>Address</h3>
+                    <h3>Alamat</h3>
                     <p>Cluster Bukit Damar Citra Indah City</p>
                     <p>Desa Singajaya Kecamatan Jonggol Kabupaten Bogor</p>
                   </div>
@@ -38,64 +37,56 @@
                 <div class="col-md-6">
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="bi bi-telephone"></i>
-                    <h3>No Whatsapp</h3>
-                    <p>+62 812-3456-7890</p>
-                    <p>+1 6678 254445 41</p>
+                    <h3>No WhatsApp</h3>
+                    <p><a href="https://wa.me/6281234567890" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 500;"><i class="bi bi-whatsapp me-2" style="font-size: 14px;"></i>+62 812-3456-7890</a></p>
+                    <p><a href="https://wa.me/1667825444541" target="_blank" style="color: #25D366; text-decoration: none; font-weight: 500;"><i class="bi bi-whatsapp me-2" style="font-size: 14px;"></i>+1 6678 254445 41</a></p>
                   </div>
                 </div><!-- End Info Item -->
 
                 <div class="col-md-6">
                   <div class="info-item" data-aos="fade" data-aos-delay="400">
                     <i class="bi bi-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>bukitdamar03@gmail.com</p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:bukitdamar03@gmail.com" style="color: inherit; text-decoration: none;">bukitdamar03@gmail.com</a></p>
                   </div>
                 </div><!-- End Info Item -->
 
                 <div class="col-md-6">
                   <div class="info-item" data-aos="fade" data-aos-delay="500">
                     <i class="bi bi-clock"></i>
-                    <h3>Open Hours</h3>
-                    <p>Monday - Friday</p>
-                    <p>9:00AM - 05:00PM</p>
+                    <h3>Jam Operasional</h3>
+                    <p>Senin - Jumat</p>
+                    <p>09:00 - 17:00 WIB</p>
                   </div>
                 </div><!-- End Info Item -->
-
               </div>
-
             </div>
 
             <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
-
+              <div class="info-item" data-aos="fade" data-aos-delay="600" style="height: 100%;">
+                <h3 class="mb-3"><i class="bi bi-map me-2"></i>Lokasi</h3>
+                <div style="width: 100%; height: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                  <iframe
+                    src="https://www.google.com/maps?q=Cluster+Bukit+Damar+Citra+Indah+City+Jonggol+Bogor&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Lokasi Cluster Bukit Damar">
+                  </iframe>
                 </div>
-              </form>
-            </div><!-- End Contact Form -->
+                <p class="mt-3 mb-0">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Cluster+Bukit+Damar+Citra+Indah+City+Jonggol+Bogor"
+                    target="_blank"
+                    class="btn btn-sm"
+                    style="background: transparent; border: none; color: #0d6efd; padding-left: 0;">
+                   <i class="bi bi-geo-alt-fill me-2"></i>Buka di Google Maps
+                 </a>
+                </p>
+              </div>
+            </div><!-- End Google Maps -->
 
           </div>
 
@@ -123,7 +114,12 @@
         font-size: 18px !important;
         margin-bottom: 0 !important;
       }
+
+      .info-item a:hover {
+        text-decoration: underline !important;
+      }
     </style>
     @endpush
 
   @endsection
+

@@ -12,13 +12,13 @@
     <div class="col-lg-8">
       <div class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
-          @include('profile.partials.update-profile-information-form')
+          @include('profile.backend.partials.update-profile-information-form')
         </div>
       </div>
 
       <div class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
-          @include('profile.partials.update-password-form')
+          @include('profile.backend.partials.update-password-form')
         </div>
       </div>
     </div>

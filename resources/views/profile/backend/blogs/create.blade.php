@@ -1,9 +1,9 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Edit Blog - Website Bukit Damar')
+@section('title', 'Tambah Blog Baru - Website Bukit Damar')
 
 @php
-  $header = 'Edit Blog';
+  $header = 'Tambah Blog Baru';
 @endphp
 
 @section('content')
@@ -20,16 +20,15 @@
       <div class="card shadow-sm border-0">
         <div class="card-header bg-white border-bottom">
           <div class="d-flex justify-content-between align-items-center">
-            <h5 class="mb-0"><i class="bi bi-journal-text me-2"></i>Form Edit Blog</h5>
+            <h5 class="mb-0"><i class="bi bi-journal-plus me-2"></i>Form Tambah Blog Baru</h5>
             <a href="{{ route('blogs.index') }}" class="btn btn-sm btn-secondary">
               <i class="bi bi-arrow-left me-1"></i>Kembali
             </a>
           </div>
         </div>
         <div class="card-body p-4">
-          <form method="POST" action="{{ route('blogs.update', $blog) }}" enctype="multipart/form-data">
+          <form method="POST" action="{{ route('blogs.store') }}" enctype="multipart/form-data">
             @csrf
-            @method('PUT')
 
             @if($errors->any())
               <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -50,7 +49,7 @@
                      class="form-control @error('judul') is-invalid @enderror"
                      id="judul"
                      name="judul"
-                     value="{{ old('judul', $blog->judul) }}"
+                     value="{{ old('judul') }}"
                      required
                      autofocus
                      placeholder="Masukkan judul blog">
@@ -62,31 +61,26 @@
             <!-- Kategori -->
             <div class="mb-3">
               <label for="kategori" class="form-label">Kategori</label>
-              @php
-                $standardCategories = ['Kegiatan', 'Olahraga', 'Keagamaan', 'Kesehatan', 'Sosial', 'Infrastruktur', 'Pengumuman', 'Berita', 'Pendidikan', 'Ekonomi'];
-                $currentKategori = old('kategori', $blog->kategori);
-                $isCustomCategory = $currentKategori && !in_array($currentKategori, $standardCategories);
-              @endphp
               <select class="form-select @error('kategori') is-invalid @enderror" id="kategori" name="kategori" onchange="toggleCustomCategory(this)">
                 <option value="">Pilih Kategori (Opsional)</option>
-                <option value="Kegiatan" {{ $currentKategori == 'Kegiatan' ? 'selected' : '' }}>Kegiatan</option>
-                <option value="Olahraga" {{ $currentKategori == 'Olahraga' ? 'selected' : '' }}>Olahraga</option>
-                <option value="Keagamaan" {{ $currentKategori == 'Keagamaan' ? 'selected' : '' }}>Keagamaan</option>
-                <option value="Kesehatan" {{ $currentKategori == 'Kesehatan' ? 'selected' : '' }}>Kesehatan</option>
-                <option value="Sosial" {{ $currentKategori == 'Sosial' ? 'selected' : '' }}>Sosial</option>
-                <option value="Infrastruktur" {{ $currentKategori == 'Infrastruktur' ? 'selected' : '' }}>Infrastruktur</option>
-                <option value="Pengumuman" {{ $currentKategori == 'Pengumuman' ? 'selected' : '' }}>Pengumuman</option>
-                <option value="Berita" {{ $currentKategori == 'Berita' ? 'selected' : '' }}>Berita</option>
-                <option value="Pendidikan" {{ $currentKategori == 'Pendidikan' ? 'selected' : '' }}>Pendidikan</option>
-                <option value="Ekonomi" {{ $currentKategori == 'Ekonomi' ? 'selected' : '' }}>Ekonomi</option>
-                <option value="custom" {{ $isCustomCategory ? 'selected' : '' }}>Lainnya (Kustom)</option>
+                <option value="Kegiatan" {{ old('kategori') == 'Kegiatan' ? 'selected' : '' }}>Kegiatan</option>
+                <option value="Olahraga" {{ old('kategori') == 'Olahraga' ? 'selected' : '' }}>Olahraga</option>
+                <option value="Keagamaan" {{ old('kategori') == 'Keagamaan' ? 'selected' : '' }}>Keagamaan</option>
+                <option value="Kesehatan" {{ old('kategori') == 'Kesehatan' ? 'selected' : '' }}>Kesehatan</option>
+                <option value="Sosial" {{ old('kategori') == 'Sosial' ? 'selected' : '' }}>Sosial</option>
+                <option value="Infrastruktur" {{ old('kategori') == 'Infrastruktur' ? 'selected' : '' }}>Infrastruktur</option>
+                <option value="Pengumuman" {{ old('kategori') == 'Pengumuman' ? 'selected' : '' }}>Pengumuman</option>
+                <option value="Berita" {{ old('kategori') == 'Berita' ? 'selected' : '' }}>Berita</option>
+                <option value="Pendidikan" {{ old('kategori') == 'Pendidikan' ? 'selected' : '' }}>Pendidikan</option>
+                <option value="Ekonomi" {{ old('kategori') == 'Ekonomi' ? 'selected' : '' }}>Ekonomi</option>
+                <option value="custom" {{ old('kategori') && !in_array(old('kategori'), ['Kegiatan', 'Olahraga', 'Keagamaan', 'Kesehatan', 'Sosial', 'Infrastruktur', 'Pengumuman', 'Berita', 'Pendidikan', 'Ekonomi']) ? 'selected' : '' }}>Lainnya (Kustom)</option>
               </select>
-              <div id="custom-category-container" class="mt-2" style="display: {{ $isCustomCategory ? 'block' : 'none' }};">
+              <div id="custom-category-container" class="mt-2" style="display: none;">
                 <input type="text"
                        class="form-control @error('kategori') is-invalid @enderror"
                        id="kategori-custom"
                        name="kategori"
-                       value="{{ $isCustomCategory ? $currentKategori : '' }}"
+                       value="{{ old('kategori') && !in_array(old('kategori'), ['Kegiatan', 'Olahraga', 'Keagamaan', 'Kesehatan', 'Sosial', 'Infrastruktur', 'Pengumuman', 'Berita', 'Pendidikan', 'Ekonomi']) ? old('kategori') : '' }}"
                        placeholder="Masukkan kategori kustom">
                 <small class="text-muted">Masukkan nama kategori kustom</small>
               </div>
@@ -103,7 +97,7 @@
                         id="excerpt"
                         name="excerpt"
                         rows="3"
-                        placeholder="Ringkasan singkat tentang blog (akan muncul di halaman list blog)">{{ old('excerpt', $blog->excerpt) }}</textarea>
+                        placeholder="Ringkasan singkat tentang blog (akan muncul di halaman list blog)">{{ old('excerpt') }}</textarea>
               @error('excerpt')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror
@@ -118,23 +112,16 @@
                         name="konten"
                         rows="15"
                         required
-                        placeholder="Tulis konten blog di sini...">{{ old('konten', $blog->konten) }}</textarea>
+                        placeholder="Tulis konten blog di sini...">{{ old('konten') }}</textarea>
               @error('konten')
                 <div class="invalid-feedback">{{ $message }}</div>
               @enderror
-              <small class="text-muted">Anda dapat menggunakan HTML untuk formatting</small>
+              <small class="text-muted">Gunakan editor di atas untuk memformat konten, upload gambar, dan lainnya</small>
             </div>
 
             <!-- Gambar -->
             <div class="mb-3">
               <label for="gambar" class="form-label">Gambar Utama</label>
-              @if($blog->gambar)
-                <div class="mb-2">
-                  <p class="mb-1"><strong>Gambar Saat Ini:</strong></p>
-                  <img src="{{ Storage::url($blog->gambar) }}" alt="Gambar Blog" class="img-thumbnail" style="max-width: 400px; max-height: 300px;">
-                </div>
-                <small class="text-muted d-block mb-2">Upload file baru untuk mengganti gambar</small>
-              @endif
               <input type="file"
                      class="form-control @error('gambar') is-invalid @enderror"
                      id="gambar"
@@ -154,8 +141,8 @@
             <div class="mb-4">
               <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
               <select class="form-select @error('status') is-invalid @enderror" id="status" name="status" required>
-                <option value="draft" {{ old('status', $blog->status) == 'draft' ? 'selected' : '' }}>Draft</option>
-                <option value="published" {{ old('status', $blog->status) == 'published' ? 'selected' : '' }}>Published</option>
+                <option value="draft" {{ old('status', 'draft') == 'draft' ? 'selected' : '' }}>Draft</option>
+                <option value="published" {{ old('status') == 'published' ? 'selected' : '' }}>Published</option>
               </select>
               @error('status')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -168,7 +155,7 @@
                 <i class="bi bi-x-circle me-2"></i>Batal
               </a>
               <button type="submit" class="btn btn-primary">
-                <i class="bi bi-save me-2"></i>Update Blog
+                <i class="bi bi-save me-2"></i>Simpan Blog
               </button>
             </div>
           </form>
@@ -177,8 +164,62 @@
     </div>
   </div>
 
+  @push('styles')
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs4.min.css" rel="stylesheet">
+  @endpush
+
   @push('scripts')
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs4.min.js"></script>
   <script>
+    $(document).ready(function() {
+      $('#konten').summernote({
+        height: 500,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'italic', 'underline', 'clear']],
+          ['fontname', ['fontname']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ],
+        callbacks: {
+          onImageUpload: function(files) {
+            uploadImage(files[0]);
+          }
+        }
+      });
+
+      function uploadImage(file) {
+        var formData = new FormData();
+        formData.append('file', file);
+
+        $.ajax({
+          url: '{{ route("blogs.upload-image") }}',
+          method: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          success: function(response) {
+            $('#konten').summernote('insertImage', response.url);
+          },
+          error: function(xhr) {
+            alert('Gagal mengupload gambar: ' + (xhr.responseJSON?.error || 'Terjadi kesalahan'));
+          }
+        });
+      }
+
+      // Pastikan konten dari Summernote tersimpan ke textarea sebelum submit
+      $('form').on('submit', function() {
+        $('#konten').val($('#konten').summernote('code'));
+      });
+    });
+
     function previewImage(input) {
       const previewContainer = document.getElementById('preview-container');
       const previewImage = document.getElementById('preview-image');

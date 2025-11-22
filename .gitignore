@@ -18,7 +18,12 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/storage/logs/*.log
 /vendor
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Testing files (tidak perlu di production)
+test-forgot-password.sh
+TESTING_FORGOT_PASSWORD.md

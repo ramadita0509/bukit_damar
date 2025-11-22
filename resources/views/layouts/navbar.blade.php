@@ -27,18 +27,18 @@
         <li class="dropdown">
           <a role="button" tabindex="0"><span>Pusat Informasi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-            <li class="dropdown">
-              <a role="button" tabindex="0"><span>Persyaratan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="{{ url('/ktp') }}" class="{{ Request::is('ktp') ? 'active' : '' }}">Pembuatan KTP atau KK</a></li>
-                <li><a href="{{ url('/domisili') }}" class="{{ Request::is('domisili') ? 'active' : '' }}">Pembuatan Domisili</a></li>
-                <li><a href="{{ url('/nikah') }}" class="{{ Request::is('nikah') ? 'active' : '' }}">Pembuatan Surat Nikah</a></li>
-                <li><a href="{{ url('/surat-kematian') }}" class="{{ Request::is('surat-kematian') ? 'active' : '' }}">Pembuatan Surat Kematian</a></li>
-                <li><a href="{{ url('/izin-usaha') }}" class="{{ Request::is('izin-usaha') ? 'active' : '' }}">Pembuatan Izin Usaha</a></li>
-              </ul>
-            </li>
             <li><a href="{{ url('/skck') }}" class="{{ Request::is('skck') ? 'active' : '' }}">Informasi SKCK</a></li>
             <li><a href="{{ url('/akta-lahir') }}" class="{{ Request::is('akta-lahir') ? 'active' : '' }}">Informasi Akta Lahir</a></li>
+            <li class="dropdown">
+                <a role="button" tabindex="0"><span>Persyaratan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="{{ url('/ktp') }}" class="{{ Request::is('ktp') ? 'active' : '' }}">Pembuatan KTP atau KK</a></li>
+                  <li><a href="{{ url('/domisili') }}" class="{{ Request::is('domisili') ? 'active' : '' }}">Pembuatan Domisili</a></li>
+                  <li><a href="{{ url('/nikah') }}" class="{{ Request::is('nikah') ? 'active' : '' }}">Pembuatan Surat Nikah</a></li>
+                  <li><a href="{{ url('/surat-kematian') }}" class="{{ Request::is('surat-kematian') ? 'active' : '' }}">Pembuatan Surat Kematian</a></li>
+                  <li><a href="{{ url('/izin-usaha') }}" class="{{ Request::is('izin-usaha') ? 'active' : '' }}">Pembuatan Izin Usaha</a></li>
+                </ul>
+              </li>
           </ul>
         </li>
         <li><a href="{{ url('/kontak') }}" class="{{ Request::is('kontak') ? 'active' : '' }}">Kontak</a></li>

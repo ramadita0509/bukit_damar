@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Damar Sport Center - Futsal Anak-Anak - Website Bukit Damar')
+@section('title', 'Damar Park - Website Bukit Damar')
 
 @section('content')
 
@@ -9,135 +9,140 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1>Damar Sport Center</h1>
-            <p class="lead">Program Futsal Anak-Anak RT 002 RW 017 Bukit Damar</p>
+            <h1>Damar Park</h1>
+            <p class="lead">Area Rekreasi dan Ruang Terbuka Hijau untuk Keluarga</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Details Section -->
-    <section id="blog-details" class="blog-details section">
+    <!-- About Section -->
+    <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-8">
-            <article class="article">
-              <div class="post-img text-center mb-4">
-                <img src="{{ asset('assets/img/features.png') }}" alt="Damar Sport Center" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
+            <div class="content" data-aos="fade-up">
+              <div class="text-center mb-4">
+                <img src="{{ asset('assets/img/features.png') }}" alt="Damar Park Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
               </div>
 
-              <h2 class="title">Program Futsal Anak-Anak Gratis Setiap Minggu</h2>
-
-              <div class="meta-top">
-                <ul>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-person"></i>
-                    <a href="#">Pengurus RT 002 RW 017</a>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-clock"></i>
-                    <time datetime="2024-01-01">Setiap Hari Minggu</time>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-calendar"></i>
-                    <time datetime="2024-01-01">06:30 - 08:30 WIB</time>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-tag"></i>
-                    <a href="#">Olahraga</a>
-                  </li>
-                </ul>
-              </div>
+              <h2 class="mb-4" style="color: #0ea2e7;">
+                <i class="bi bi-tree-fill me-2"></i>Damar Park: Ruang Rekreasi dan Interaksi Sosial Warga
+              </h2>
 
               <div class="content">
                 <p class="lead">
-                  <strong>Damar Sport Center</strong> dengan bangga mempersembahkan program futsal gratis untuk anak-anak warga RT 002 RW 017 Bukit Damar. Program ini merupakan salah satu bentuk kepedulian pengurus RT dalam mengembangkan minat dan bakat olahraga anak-anak di lingkungan kita.
+                  <strong>Damar Park</strong> merupakan area rekreasi dan ruang terbuka hijau yang menjadi salah satu fasilitas unggulan di lingkungan RT 002 RW 017 Bukit Damar. Taman ini dirancang sebagai tempat berkumpul, berolahraga ringan, dan berinteraksi sosial bagi seluruh warga, baik anak-anak, remaja, maupun orang dewasa.
                 </p>
 
-                <h3>Jadwal Kegiatan</h3>
+                <h3>Fasilitas yang Tersedia</h3>
+
+                <h4>Area Bermain Anak</h4>
                 <p>
-                  Program futsal anak-anak dilaksanakan secara rutin setiap <strong>Hari Minggu pagi</strong> mulai pukul <strong>06:30 - 08:30 WIB</strong>. Kegiatan ini diadakan di lapangan futsal Damar Sport Center yang terletak di lingkungan RT 002 RW 017 Bukit Damar.
+                  Damar Park dilengkapi dengan area bermain yang aman dan nyaman untuk anak-anak. Area ini dilengkapi dengan berbagai permainan yang dapat mengembangkan motorik dan kreativitas anak-anak sambil tetap dalam pengawasan orang tua.
                 </p>
+                <ul style="line-height: 2;">
+                  <li><strong>Wahana Permainan:</strong> Ayunan, perosotan, dan permainan edukatif lainnya</li>
+                  <li><strong>Keamanan:</strong> Permukaan yang aman dan ramah anak</li>
+                  <li><strong>Pengawasan:</strong> Area yang mudah diawasi oleh orang tua</li>
+                </ul>
 
-                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #0ea2e7; padding: 1rem; margin: 1.5rem 0;">
-                  <h5 style="color: #0ea2e7; margin-bottom: 0.5rem;">
-                    <i class="bi bi-info-circle me-2"></i>Informasi Penting
+                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #17a2b8; padding: 1rem; margin: 1.5rem 0;">
+                  <h5 style="color: #17a2b8; margin-bottom: 0.5rem;">
+                    <i class="bi bi-info-circle me-2"></i>Area Ramah Anak
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    <strong>Program ini GRATIS</strong> untuk semua anak-anak warga RT 002 RW 017 Bukit Damar. Tidak ada biaya pendaftaran atau iuran bulanan. Program ini murni untuk kepentingan pengembangan olahraga dan kesehatan anak-anak di lingkungan kita.
+                    Semua peralatan bermain di Damar Park dirancang dengan standar keamanan yang tinggi. Orang tua dapat dengan tenang mengawasi anak-anak mereka bermain sambil menikmati suasana taman yang asri.
                   </p>
                 </div>
 
-                <h3>Manfaat Program</h3>
+                <h4>Jogging Track dan Area Olahraga</h4>
                 <p>
-                  Program futsal anak-anak ini memiliki berbagai manfaat positif, antara lain:
+                  Untuk warga yang gemar berolahraga, Damar Park menyediakan jogging track yang mengelilingi area taman. Track ini dapat digunakan untuk jogging, jalan santai, atau olahraga ringan lainnya di pagi atau sore hari.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Kesehatan Fisik:</strong> Meningkatkan kebugaran tubuh, koordinasi motorik, dan daya tahan anak-anak</li>
-                  <li><strong>Keterampilan Sosial:</strong> Mengembangkan kemampuan bekerja sama dalam tim, sportivitas, dan komunikasi</li>
-                  <li><strong>Disiplin:</strong> Melatih kedisiplinan melalui jadwal latihan yang teratur</li>
-                  <li><strong>Kreativitas:</strong> Mengembangkan kreativitas dalam bermain dan strategi</li>
-                  <li><strong>Kebersamaan:</strong> Mempererat tali silaturahmi antar anak-anak warga RT</li>
+                  <li><strong>Jogging Track:</strong> Jalur lari yang mengelilingi taman</li>
+                  <li><strong>Area Olahraga:</strong> Tempat untuk senam pagi atau olahraga ringan</li>
+                  <li><strong>Waktu Terbaik:</strong> Pagi hari (06:00-08:00) dan sore hari (16:00-18:00)</li>
                 </ul>
 
-                <h3>Sasaran Program</h3>
-                <p>
-                  Program ini ditujukan untuk anak-anak warga RT 002 RW 017 Bukit Damar dengan rentang usia yang disesuaikan dengan kebutuhan. Kegiatan ini terbuka untuk semua anak-anak yang berminat mengikuti program futsal.
-                </p>
+                <h3>Kegiatan yang Dapat Dilakukan</h3>
 
-                <h3>Fasilitas</h3>
+                <h4>Rekreasi Keluarga</h4>
                 <p>
-                  Damar Sport Center menyediakan fasilitas lapangan futsal yang memadai untuk mendukung kegiatan latihan. Lapangan dilengkapi dengan berbagai peralatan yang diperlukan untuk latihan futsal anak-anak.
+                  Damar Park menjadi tempat favorit untuk kegiatan rekreasi keluarga. Warga dapat mengajak keluarga untuk piknik, bermain bersama, atau sekadar menghabiskan waktu berkualitas di akhir pekan.
+                </p>
+                <ul style="line-height: 2;">
+                  <li><strong>Piknik Keluarga:</strong> Area yang cocok untuk piknik bersama keluarga</li>
+                  <li><strong>Bermain Bersama:</strong> Tempat bermain yang aman untuk anak-anak</li>
+                  <li><strong>Foto Bersama:</strong> Spot foto yang menarik dengan pemandangan hijau</li>
+                </ul>
+
+                <h4>Kegiatan Komunitas</h4>
+                <p>
+                  Selain untuk rekreasi pribadi, Damar Park juga sering digunakan untuk berbagai kegiatan komunitas warga, seperti senam bersama, kegiatan outbound, atau festival lingkungan.
+                </p>
+                <ul style="line-height: 2;">
+                  <li><strong>Senam Bersama:</strong> Kegiatan senam pagi atau senam lansia</li>
+                  <li><strong>Outbound:</strong> Kegiatan team building untuk warga</li>
+                  <li><strong>Festival:</strong> Acara festival lingkungan atau hari besar nasional</li>
+                </ul>
+
+                <h3>Keunggulan Damar Park</h3>
+                <p>
+                  Damar Park memiliki beberapa keunggulan yang membuatnya menjadi pilihan utama warga untuk beraktivitas:
+                </p>
+                <ul style="line-height: 2;">
+                  <li><strong>Lingkungan Asri:</strong> Taman yang hijau dan sejuk dengan pepohonan yang rindang</li>
+                  <li><strong>Akses Mudah:</strong> Lokasi yang strategis dan mudah dijangkau dari seluruh area RT</li>
+                  <li><strong>Fasilitas Lengkap:</strong> Dilengkapi dengan berbagai fasilitas pendukung</li>
+                  <li><strong>Keamanan:</strong> Area yang aman dan terawat dengan baik</li>
+                  <li><strong>Gratis:</strong> Akses gratis untuk semua warga RT 002 RW 017</li>
+                </ul>
+
+                <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
+                  <h5 style="color: #28a745; margin-bottom: 0.5rem;">
+                    <i class="bi bi-check-circle me-2"></i>Manfaat untuk Warga
+                  </h5>
+                  <p class="mb-0" style="color: #2c3e50;">
+                    Keberadaan Damar Park memberikan banyak manfaat bagi warga, mulai dari meningkatkan kualitas hidup, mempererat hubungan sosial antar warga, hingga menjadi tempat edukasi lingkungan bagi anak-anak.
+                  </p>
+                </div>
+
+                <h3>Perawatan dan Kebersihan</h3>
+                <p>
+                  Pengurus RT 002 RW 017 berkomitmen untuk menjaga dan merawat Damar Park agar tetap bersih, aman, dan nyaman untuk digunakan. Perawatan rutin dilakukan untuk memastikan semua fasilitas dalam kondisi baik dan area taman tetap hijau dan asri.
                 </p>
 
                 <h3>Dukungan Pengurus RT</h3>
                 <p>
-                  Program ini didukung penuh oleh pengurus RT 002 RW 017 Bukit Damar sebagai bagian dari upaya meningkatkan kualitas hidup warga, khususnya dalam bidang olahraga dan kesehatan. Pengurus RT berkomitmen untuk terus mengembangkan program-program positif lainnya untuk kemajuan lingkungan.
+                  Damar Park didukung penuh oleh pengurus RT 002 RW 017 Bukit Damar sebagai bagian dari upaya meningkatkan kualitas hidup warga. Pengurus RT terus berupaya mengembangkan dan memperbaiki fasilitas di taman untuk memberikan pengalaman terbaik bagi warga.
                 </p>
 
                 <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
                   <h5 style="color: #28a745; margin-bottom: 0.5rem;">
-                    <i class="bi bi-check-circle me-2"></i>Ayo Bergabung!
+                    <i class="bi bi-check-circle me-2"></i>Ayo Manfaatkan Damar Park!
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Bagi orang tua yang ingin mendaftarkan anak-anaknya untuk mengikuti program futsal gratis ini, silakan menghubungi pengurus RT atau datang langsung ke lapangan futsal Damar Sport Center setiap hari Minggu pagi pukul 06:30 WIB.
+                    Semua warga RT 002 RW 017 Bukit Damar diundang untuk memanfaatkan Damar Park sebagai tempat rekreasi dan interaksi sosial. Mari kita jaga kebersihan dan keamanan taman bersama-sama agar dapat dinikmati oleh semua warga.
                   </p>
                 </div>
 
                 <h3>Kontak Informasi</h3>
                 <p>
-                  Untuk informasi lebih lanjut mengenai program futsal anak-anak atau kegiatan lainnya di Damar Sport Center, silakan menghubungi:
+                  Untuk informasi lebih lanjut mengenai Damar Park atau jika ingin mengadakan kegiatan di taman, silakan menghubungi:
                 </p>
                 <ul style="line-height: 2;">
                   <li><strong>Pengurus RT 002 RW 017 Bukit Damar</strong></li>
-                  <li>Lokasi: Damar Sport Center, RT 002 RW 017 Bukit Damar</li>
-                  <li>Jadwal: Setiap Hari Minggu, 06:30 - 08:30 WIB</li>
+                  <li>Lokasi: Damar Park, RT 002 RW 017 Bukit Damar</li>
+                  <li>Akses: 24 Jam (dengan memperhatikan ketertiban umum)</li>
                 </ul>
 
                 <p class="mt-4">
-                  Mari bersama-sama kita dukung program positif ini untuk masa depan anak-anak yang lebih sehat, aktif, dan berprestasi!
+                  Mari bersama-sama kita jadikan Damar Park sebagai ruang publik yang nyaman, aman, dan bermanfaat bagi seluruh warga RT 002 RW 017 Bukit Damar!
                 </p>
               </div>
-
-              <div class="meta-bottom">
-                <i class="bi bi-folder"></i>
-                <ul class="cats">
-                  <li><a href="#">Olahraga</a></li>
-                  <li><a href="#">Futsal</a></li>
-                  <li><a href="#">Anak-Anak</a></li>
-                </ul>
-
-                <i class="bi bi-tags"></i>
-                <ul class="tags">
-                  <li><a href="#">Futsal</a></li>
-                  <li><a href="#">Anak-Anak</a></li>
-                  <li><a href="#">Gratis</a></li>
-                  <li><a href="#">Olahraga</a></li>
-                  <li><a href="#">Damar Sport Center</a></li>
-                </ul>
-              </div>
-
-            </article>
+            </div>
 
           </div>
 
@@ -239,22 +244,22 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('fasilitas.damar-park') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
-                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #17a2b8; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#138496'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#17a2b8'">
+                  <a href="{{ route('fasilitas.dsc') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
+                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #0ea2e7; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#0d6efd'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#0ea2e7'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
-                          <div style="width: 40px; height: 40px; background: #17a2b8; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-tree-fill text-white"></i>
+                          <div style="width: 40px; height: 40px; background: #0ea2e7; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-trophy text-white"></i>
                           </div>
                         </div>
                         <div class="flex-grow-1">
-                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Damar Park</h4>
+                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Damar Sport Center</h4>
                           <p style="font-size: 0.875rem; color: #6c757d; margin-bottom: 0;">
-                            <i class="bi bi-flower1 me-1"></i>Area Rekreasi
+                            <i class="bi bi-activity me-1"></i>Kegiatan Olahraga
                           </p>
                         </div>
                         <div class="flex-shrink-0">
-                          <i class="bi bi-arrow-right" style="color: #17a2b8;"></i>
+                          <i class="bi bi-arrow-right" style="color: #0ea2e7;"></i>
                         </div>
                       </div>
                     </div>
@@ -323,19 +328,6 @@
                     </div>
                   </a>
                 </div>
-              </div>
-
-              <div class="sidebar-item tags" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="sidebar-title mb-3" style="font-size: 1.25rem; font-weight: 600; color: #2c3e50; padding-bottom: 0.75rem; border-bottom: 2px solid #e9ecef;">Tags</h3>
-                <ul class="mt-3" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Futsal</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Olahraga</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Anak-Anak</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Gratis</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Damar Sport Center</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">RT 002 RW 017</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#0ea2e7'; this.style.color='#fff'; this.style.borderColor='#0ea2e7'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Bukit Damar</a></li>
-                </ul>
               </div>
             </div>
           </div>

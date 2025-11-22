@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Sistem Keamanan - Website Bukit Damar')
+@section('title', 'Meeting Point - Website Bukit Damar')
 
 @section('content')
 
@@ -9,180 +9,120 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1>Sistem Keamanan</h1>
-            <p class="lead">Keamanan dan Ketertiban Lingkungan RT 002 RW 017</p>
+            <h1>Meeting Point</h1>
+            <p class="lead">Titik Kumpul dan Koordinasi Warga RT 002 RW 017</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Details Section -->
-    <section id="blog-details" class="blog-details section">
+    <!-- About Section -->
+    <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-8">
-            <article class="article">
-              <div class="post-img text-center mb-4">
-                <img src="{{ asset('assets/img/features.png') }}" alt="Sistem Keamanan Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
+            <div class="content" data-aos="fade-up">
+              <div class="text-center mb-4">
+                <img src="{{ asset('assets/img/features.png') }}" alt="Meeting Point Bukit Damar" class="img-fluid" style="max-width: 50%; height: auto; border-radius: 10px;">
               </div>
 
-              <h2 class="title">Sistem Keamanan: Menjaga Keamanan dan Ketertiban Lingkungan</h2>
-
-              <div class="meta-top">
-                <ul>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-person"></i>
-                    <a href="{{ route('kepengurusan') }}">Pengurus RT 002 RW 017</a>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-clock"></i>
-                    <time datetime="2024-01-01">24 Jam</time>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-calendar"></i>
-                    <time datetime="2024-01-01">Pengawasan Terpadu</time>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <i class="bi bi-tag"></i>
-                    <a href="#">Keamanan</a>
-                  </li>
-                </ul>
-              </div>
+              <h2 class="mb-4" style="color: #0ea2e7;">
+                <i class="bi bi-geo-alt-fill me-2"></i>Meeting Point: Titik Kumpul dan Koordinasi Kegiatan Warga
+              </h2>
 
               <div class="content">
                 <p class="lead">
-                  <strong>Sistem Keamanan</strong> di lingkungan RT 002 RW 017 Bukit Damar dirancang untuk memberikan perlindungan dan rasa aman bagi seluruh warga. Sistem keamanan yang terintegrasi ini melibatkan berbagai komponen, mulai dari pengawasan, patroli, hingga koordinasi dengan pihak terkait untuk memastikan lingkungan tetap aman dan tertib.
+                  <strong>Meeting Point</strong> merupakan titik kumpul strategis di lingkungan RT 002 RW 017 Bukit Damar yang berfungsi sebagai tempat koordinasi, titik kumpul untuk berbagai kegiatan, dan pusat informasi bagi warga. Lokasi ini memudahkan warga untuk berkumpul dan berkoordinasi sebelum melakukan kegiatan bersama.
                 </p>
 
-                <h3>Komponen Sistem Keamanan</h3>
+                <h3>Fungsi Meeting Point</h3>
 
-                <h4>Pengawasan 24 Jam</h4>
+                <h4>Titik Kumpul Kegiatan</h4>
                 <p>
-                  Sistem keamanan di RT 002 RW 017 dilengkapi dengan pengawasan yang berjalan 24 jam untuk memastikan keamanan lingkungan. Pengawasan ini dilakukan secara terpadu dengan melibatkan berbagai elemen keamanan.
+                  Meeting Point digunakan sebagai titik kumpul untuk berbagai kegiatan warga, baik kegiatan rutin maupun kegiatan khusus. Lokasi ini memudahkan koordinasi dan memastikan semua peserta kegiatan dapat berkumpul di tempat yang sama sebelum memulai aktivitas.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Patroli Rutin:</strong> Patroli keamanan secara berkala di seluruh area RT</li>
-                  <li><strong>Pengawasan:</strong> Pengawasan terhadap aktivitas mencurigakan</li>
-                  <li><strong>Koordinasi:</strong> Koordinasi dengan warga dan pihak terkait</li>
+                  <li><strong>Kegiatan Gotong Royong:</strong> Titik kumpul sebelum kerja bakti</li>
+                  <li><strong>Kegiatan Olahraga:</strong> Titik kumpul untuk senam bersama atau olahraga komunitas</li>
+                  <li><strong>Kegiatan Sosial:</strong> Titik kumpul untuk kegiatan bakti sosial</li>
                 </ul>
 
-                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0;">
-                  <h5 style="color: #ffc107; margin-bottom: 0.5rem;">
-                    <i class="bi bi-info-circle me-2"></i>Keamanan Terpadu
+                <div class="alert alert-info" role="alert" style="background-color: #e7f3ff; border-left: 4px solid #dc3545; padding: 1rem; margin: 1.5rem 0;">
+                  <h5 style="color: #dc3545; margin-bottom: 0.5rem;">
+                    <i class="bi bi-info-circle me-2"></i>Koordinasi yang Efektif
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Sistem keamanan di RT 002 RW 017 dirancang secara terpadu dengan melibatkan seluruh elemen, mulai dari pengurus RT, satpam, hingga partisipasi aktif warga dalam menjaga keamanan lingkungan.
+                    Meeting Point memudahkan koordinasi kegiatan warga dengan menyediakan lokasi yang jelas dan mudah dijangkau. Semua warga dapat dengan mudah menemukan lokasi kumpul untuk berbagai kegiatan.
                   </p>
                 </div>
 
-                <h4>Satpam dan Petugas Keamanan</h4>
+                <h4>Pusat Informasi</h4>
                 <p>
-                  RT 002 RW 017 dilengkapi dengan satpam dan petugas keamanan yang bertugas menjaga keamanan lingkungan. Petugas keamanan ini bekerja secara profesional untuk memastikan lingkungan tetap aman dan tertib.
+                  Meeting Point juga berfungsi sebagai pusat informasi bagi warga. Informasi penting, pengumuman, dan koordinasi kegiatan biasanya dilakukan di lokasi ini, memudahkan warga untuk mendapatkan informasi terkini.
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Satpam:</strong> Petugas keamanan yang bertugas menjaga lingkungan</li>
-                  <li><strong>Patroli:</strong> Patroli rutin di seluruh area RT</li>
-                  <li><strong>Respon Cepat:</strong> Respon cepat terhadap insiden keamanan</li>
+                  <li><strong>Pengumuman:</strong> Tempat penyampaian pengumuman penting</li>
+                  <li><strong>Koordinasi:</strong> Koordinasi kegiatan kemasyarakatan</li>
+                  <li><strong>Informasi:</strong> Pusat informasi untuk warga</li>
                 </ul>
 
-                <h3>Program Keamanan</h3>
+                <h3>Kegiatan yang Menggunakan Meeting Point</h3>
 
-                <h4>Siskamling (Sistem Keamanan Lingkungan)</h4>
+                <h4>Gotong Royong</h4>
                 <p>
-                  RT 002 RW 017 mengimplementasikan program Siskamling yang melibatkan partisipasi aktif warga dalam menjaga keamanan lingkungan. Program ini bertujuan untuk menciptakan lingkungan yang aman melalui gotong royong warga.
+                  Meeting Point menjadi titik kumpul utama untuk kegiatan gotong royong. Warga berkumpul di lokasi ini sebelum memulai kerja bakti membersihkan lingkungan atau kegiatan gotong royong lainnya.
+                </p>
+
+                <h4>Kegiatan Olahraga Bersama</h4>
+                <p>
+                  Untuk kegiatan olahraga bersama seperti senam pagi, jalan santai, atau kegiatan olahraga komunitas lainnya, Meeting Point menjadi tempat kumpul sebelum memulai aktivitas.
+                </p>
+
+                <h4>Kegiatan Sosial</h4>
+                <p>
+                  Meeting Point juga digunakan sebagai titik kumpul untuk berbagai kegiatan sosial, seperti bakti sosial, kegiatan amal, atau kegiatan kemasyarakatan lainnya.
+                </p>
+
+                <h3>Keunggulan Meeting Point</h3>
+                <p>
+                  Meeting Point memiliki beberapa keunggulan yang membuatnya efektif sebagai titik kumpul:
                 </p>
                 <ul style="line-height: 2;">
-                  <li><strong>Ronda:</strong> Kegiatan ronda warga secara bergiliran</li>
-                  <li><strong>Koordinasi:</strong> Koordinasi antar warga dalam menjaga keamanan</li>
-                  <li><strong>Komunikasi:</strong> Komunikasi cepat untuk informasi keamanan</li>
-                </ul>
-
-                <h4>Pengawasan Akses Masuk</h4>
-                <p>
-                  Sistem keamanan juga mencakup pengawasan terhadap akses masuk ke lingkungan RT. Pengawasan ini dilakukan untuk memastikan hanya warga dan tamu yang sah yang dapat masuk ke lingkungan.
-                </p>
-                <ul style="line-height: 2;">
-                  <li><strong>Pos Jaga:</strong> Pos jaga di pintu masuk utama</li>
-                  <li><strong>Pencatatan:</strong> Pencatatan tamu yang masuk ke lingkungan</li>
-                  <li><strong>Pengawasan:</strong> Pengawasan terhadap kendaraan masuk dan keluar</li>
-                </ul>
-
-                <h3>Fasilitas Keamanan</h3>
-                <p>
-                  Sistem keamanan dilengkapi dengan berbagai fasilitas pendukung:
-                </p>
-                <ul style="line-height: 2;">
-                  <li>Pos jaga keamanan di lokasi strategis</li>
-                  <li>Peralatan komunikasi untuk koordinasi</li>
-                  <li>Sistem pencahayaan yang memadai</li>
-                  <li>Fasilitas pendukung lainnya</li>
-                </ul>
-
-                <h3>Peran Warga dalam Keamanan</h3>
-                <p>
-                  Keamanan lingkungan tidak hanya menjadi tanggung jawab petugas keamanan, tetapi juga menjadi tanggung jawab bersama seluruh warga. Partisipasi aktif warga sangat penting untuk menciptakan lingkungan yang aman dan tertib.
-                </p>
-                <ul style="line-height: 2;">
-                  <li><strong>Kewaspadaan:</strong> Warga diharapkan selalu waspada terhadap aktivitas mencurigakan</li>
-                  <li><strong>Pelaporan:</strong> Segera melaporkan kejadian mencurigakan kepada petugas keamanan</li>
-                  <li><strong>Partisipasi:</strong> Aktif berpartisipasi dalam program keamanan lingkungan</li>
-                  <li><strong>Kepatuhan:</strong> Mematuhi peraturan keamanan yang berlaku</li>
+                  <li><strong>Lokasi Strategis:</strong> Terletak di lokasi yang mudah dijangkau dari seluruh area RT</li>
+                  <li><strong>Mudah Ditemukan:</strong> Lokasi yang jelas dan mudah diidentifikasi</li>
+                  <li><strong>Akses Mudah:</strong> Dapat diakses dengan mudah oleh semua warga</li>
+                  <li><strong>Fasilitas Memadai:</strong> Dilengkapi dengan fasilitas pendukung</li>
                 </ul>
 
                 <div class="alert alert-success" role="alert" style="background-color: #d4edda; border-left: 4px solid #28a745; padding: 1rem; margin: 1.5rem 0;">
                   <h5 style="color: #28a745; margin-bottom: 0.5rem;">
-                    <i class="bi bi-check-circle me-2"></i>Keamanan Bersama
+                    <i class="bi bi-check-circle me-2"></i>Manfaat untuk Warga
                   </h5>
                   <p class="mb-0" style="color: #2c3e50;">
-                    Keamanan lingkungan adalah tanggung jawab bersama. Mari kita semua berpartisipasi aktif dalam menjaga keamanan dan ketertiban lingkungan RT 002 RW 017 Bukit Damar.
+                    Keberadaan Meeting Point memudahkan koordinasi kegiatan warga, meningkatkan efisiensi dalam mengorganisir kegiatan, dan memperkuat kebersamaan antar warga melalui titik kumpul yang jelas.
                   </p>
                 </div>
 
-                <h3>Koordinasi dengan Pihak Terkait</h3>
-                <p>
-                  Sistem keamanan di RT 002 RW 017 juga melakukan koordinasi dengan pihak-pihak terkait, seperti kepolisian setempat, untuk memastikan keamanan lingkungan dapat terjaga dengan baik. Koordinasi ini dilakukan secara rutin dan berkelanjutan.
-                </p>
-
                 <h3>Dukungan Pengurus RT</h3>
                 <p>
-                  Pengurus RT 002 RW 017 berkomitmen untuk terus meningkatkan dan mengembangkan sistem keamanan lingkungan. Pengurus RT terus berupaya memastikan semua komponen keamanan berfungsi dengan baik dan dapat memberikan perlindungan maksimal bagi warga.
+                  Meeting Point didukung penuh oleh pengurus RT 002 RW 017 Bukit Damar sebagai bagian dari upaya meningkatkan koordinasi dan efisiensi kegiatan kemasyarakatan. Pengurus RT terus berupaya memastikan Meeting Point tetap berfungsi dengan baik.
                 </p>
 
                 <h3>Kontak Informasi</h3>
                 <p>
-                  Untuk informasi lebih lanjut mengenai sistem keamanan atau jika ada hal yang perlu dilaporkan, silakan menghubungi:
+                  Untuk informasi lebih lanjut mengenai Meeting Point atau koordinasi kegiatan, silakan menghubungi:
                 </p>
                 <ul style="line-height: 2;">
                   <li><strong>Pengurus RT 002 RW 017 Bukit Damar</strong></li>
-                  <li><strong>Petugas Keamanan RT 002 RW 017</strong></li>
-                  <li>Pos Jaga: Pintu Masuk Utama RT 002 RW 017</li>
+                  <li>Lokasi: Meeting Point, RT 002 RW 017 Bukit Damar</li>
+                  <li>Penggunaan: Sesuai kebutuhan koordinasi kegiatan</li>
                 </ul>
 
                 <p class="mt-4">
-                  Mari bersama-sama kita jaga keamanan dan ketertiban lingkungan RT 002 RW 017 Bukit Damar untuk menciptakan lingkungan yang aman, nyaman, dan sejahtera bagi seluruh warga!
+                  Mari kita manfaatkan Meeting Point sebagai sarana untuk meningkatkan koordinasi dan kebersamaan dalam berbagai kegiatan kemasyarakatan!
                 </p>
               </div>
-
-              <div class="meta-bottom">
-                <i class="bi bi-folder"></i>
-                <ul class="cats">
-                  <li><a href="#">Keamanan</a></li>
-                  <li><a href="#">Fasilitas</a></li>
-                  <li><a href="#">Pengawasan</a></li>
-                </ul>
-
-                <i class="bi bi-tags"></i>
-                <ul class="tags">
-                  <li><a href="#">Keamanan</a></li>
-                  <li><a href="#">Siskamling</a></li>
-                  <li><a href="#">Patroli</a></li>
-                  <li><a href="#">Pengawasan</a></li>
-                  <li><a href="#">Ketertiban</a></li>
-                  <li><a href="#">Perlindungan</a></li>
-                </ul>
-              </div>
-
-            </article>
+            </div>
 
           </div>
 
@@ -326,7 +266,7 @@
                     </div>
                   </a>
 
-                  <a href="{{ route('fasilitas.balai-warga') }}" style="text-decoration: none; display: block;">
+                  <a href="{{ route('fasilitas.balai-warga') }}" style="text-decoration: none; display: block; margin-bottom: 1rem;">
                     <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #6f42c1; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#5a32a3'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#6f42c1'">
                       <div class="d-flex align-items-start">
                         <div class="flex-shrink-0 me-3">
@@ -346,19 +286,28 @@
                       </div>
                     </div>
                   </a>
-                </div>
-              </div>
 
-              <div class="sidebar-item tags" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="sidebar-title mb-3" style="font-size: 1.25rem; font-weight: 600; color: #2c3e50; padding-bottom: 0.75rem; border-bottom: 2px solid #e9ecef;">Tags</h3>
-                <ul class="mt-3" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Keamanan</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Siskamling</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Patroli</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Pengawasan</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Ketertiban</a></li>
-                  <li><a href="#" style="display: inline-block; padding: 0.375rem 0.75rem; background-color: #f8f9fa; color: #2c3e50; border-radius: 4px; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; border: 1px solid #dee2e6;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='#fff'; this.style.borderColor='#ffc107'" onmouseout="this.style.backgroundColor='#f8f9fa'; this.style.color='#2c3e50'; this.style.borderColor='#dee2e6'">Perlindungan</a></li>
-                </ul>
+                  <a href="{{ route('fasilitas.keamanan') }}" style="text-decoration: none; display: block;">
+                    <div class="info-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #ffc107; padding: 1rem; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'; this.style.borderLeftColor='#e0a800'" onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.05)'; this.style.borderLeftColor='#ffc107'">
+                      <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                          <div style="width: 40px; height: 40px; background: #ffc107; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-shield-check text-white"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <h4 style="font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.25rem;">Keamanan</h4>
+                          <p style="font-size: 0.875rem; color: #6c757d; margin-bottom: 0;">
+                            <i class="bi bi-shield-fill me-1"></i>Sistem Keamanan
+                          </p>
+                        </div>
+                        <div class="flex-shrink-0">
+                          <i class="bi bi-arrow-right" style="color: #ffc107;"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

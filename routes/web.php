@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('profile.dashboard');
+    return view('profile.backend.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/laporan', [TransaksiController::class, 'laporan'])->middleware(['auth', 'verified'])->name('laporan');
 Route::get('/laporan/iuran-pdf', [LaporanIuranController::class, 'download'])->middleware(['auth', 'verified'])->name('laporan.iuran-pdf');
@@ -36,11 +36,11 @@ Route::middleware('auth')->group(function () {
 
 // Route untuk menampilkan data Web
 Route::get('/skck', function () {
-    return view('profile.frontend.skck');
+    return view('profile.frontend.informasi.skck');
 });
 
 Route::get('/ktp', function () {
-    return view('profile.frontend.ktp');
+    return view('profile.frontend.informasi.ktp');
 });
 Route::get('/ktp/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.ktp');
@@ -48,7 +48,7 @@ Route::get('/ktp/download-pdf', function () {
 })->name('ktp.download-pdf');
 
 Route::get('/domisili', function () {
-    return view('profile.frontend.domisili');
+    return view('profile.frontend.informasi.domisili');
 });
 Route::get('/domisili/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.domisili');
@@ -56,11 +56,11 @@ Route::get('/domisili/download-pdf', function () {
 })->name('domisili.download-pdf');
 
 Route::get('/akta-lahir', function () {
-    return view('profile.frontend.akta-lahir');
+    return view('profile.frontend.informasi.akta-lahir');
 });
 
 Route::get('/surat-kematian', function () {
-    return view('profile.frontend.surat-kematian');
+    return view('profile.frontend.informasi.surat-kematian');
 });
 Route::get('/surat-kematian/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.surat-kematian');
@@ -68,7 +68,7 @@ Route::get('/surat-kematian/download-pdf', function () {
 })->name('surat-kematian.download-pdf');
 
 Route::get('/izin-usaha', function () {
-    return view('profile.frontend.izin-usaha');
+    return view('profile.frontend.informasi.izin-usaha');
 });
 Route::get('/izin-usaha/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.izin-usaha');
@@ -76,11 +76,11 @@ Route::get('/izin-usaha/download-pdf', function () {
 })->name('izin-usaha.download-pdf');
 
 Route::get('/kontak', function () {
-    return view('profile.frontend.kontak');
+    return view('profile.frontend.informasi.kontak');
 });
 
 Route::get('/nikah', function () {
-    return view('profile.frontend.nikah');
+    return view('profile.frontend.informasi.nikah');
 });
 Route::get('/nikah/download-pdf', function () {
     $pdf = Pdf::loadView('pdf.nikah');
@@ -112,7 +112,7 @@ Route::get('/fasilitas/keamanan', function () {
 })->name('fasilitas.keamanan');
 
 Route::get('/kepengurusan', function () {
-    return view('profile.frontend.kepengurusan');
+    return view('profile.frontend.informasi.kepengurusan');
 })->name('kepengurusan');
 
 Route::get('/tentang', function () {
@@ -153,6 +153,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
         Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
         Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+        Route::post('/blogs/upload-image', [BlogController::class, 'uploadImage'])->name('blogs.upload-image');
         Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
         Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
         Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
