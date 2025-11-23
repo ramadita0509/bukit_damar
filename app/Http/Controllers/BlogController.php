@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Traits\Loggable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -11,16 +12,17 @@ use Illuminate\View\View;
 
 class BlogController extends Controller
 {
+    use Loggable;
     /**
      * Display a listing of the resource (Admin).
      */
     public function index()
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
 
-        $blogs = Blog::with('user')->orderBy('created_at', 'desc')->get();
+        $blogs = Blog::with('user')->orderBy('created_at', 'desc')->paginate(20);
 
         return view('profile.backend.blogs.index', [
             'blogs' => $blogs,
@@ -60,7 +62,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
 
@@ -72,7 +74,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
 
@@ -105,7 +107,16 @@ class BlogController extends Controller
 
         $validated['user_id'] = Auth::id();
 
-        Blog::create($validated);
+        $blog = Blog::create($validated);
+
+        // Log action
+        $this->logAction(
+            'create',
+            $blog,
+            "Membuat blog: {$blog->judul}",
+            null,
+            ['judul' => $blog->judul, 'status' => $blog->status, 'kategori' => $blog->kategori]
+        );
 
         return redirect()->route('blogs.index')
             ->with('success', 'Blog berhasil dibuat!');
@@ -134,7 +145,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
 
@@ -148,7 +159,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
 
@@ -186,7 +197,17 @@ class BlogController extends Controller
             $validated['gambar'] = $path;
         }
 
+        $changed = $this->getChangedValues($blog, $validated);
         $blog->update($validated);
+
+        // Log action
+        $this->logAction(
+            'update',
+            $blog,
+            "Memperbarui blog: {$blog->judul}",
+            $changed['old'],
+            $changed['new']
+        );
 
         return redirect()->route('blogs.index')
             ->with('success', 'Blog berhasil diperbarui!');
@@ -197,9 +218,13 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        if (!Auth::user()->isAdminOrSuperAdmin()) {
+        if (!Auth::user()->canManageBlogs()) {
             abort(403, 'Unauthorized action.');
         }
+
+        // Get blog data before delete
+        $blogData = $blog->toArray();
+        $description = "Menghapus blog: {$blog->judul}";
 
         // Hapus gambar jika ada
         if ($blog->gambar && Storage::disk('public')->exists($blog->gambar)) {
@@ -207,6 +232,15 @@ class BlogController extends Controller
         }
 
         $blog->delete();
+
+        // Log action
+        $this->logAction(
+            'delete',
+            null,
+            $description,
+            $blogData,
+            null
+        );
 
         return redirect()->route('blogs.index')
             ->with('success', 'Blog berhasil dihapus!');

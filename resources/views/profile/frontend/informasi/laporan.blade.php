@@ -15,7 +15,7 @@ use Carbon\Carbon;
         <div class="row">
           <div class="col-lg-12 text-center">
             <h1>Laporan Keuangan</h1>
-            <p class="lead">Laporan Keuangan Bulanan RT 002 RW 017 Desa Singajaya</p>
+            <p class="lead">Laporan Keuangan Bulanan RT 002 RW 017 Bukit Damar</p>
           </div>
         </div>
       </div>
@@ -163,7 +163,9 @@ use Carbon\Carbon;
                     </thead>
                     <tbody>
                       @php
-                        $saldoBerjalan = 0;
+                        // Hitung saldo berjalan dimulai dari saldo awal (dari halaman sebelumnya)
+                        // Transaksi sudah diurutkan ASC di controller untuk perhitungan saldo yang benar
+                        $saldoBerjalan = $saldoAwal ?? 0;
                       @endphp
                       @forelse($transaksi ?? [] as $item)
                         @php
@@ -253,6 +255,20 @@ use Carbon\Carbon;
                     </tfoot>
                   </table>
                 </div>
+
+                <!-- Pagination -->
+                @if($transaksi->hasPages())
+                  <div class="card-footer bg-white border-top">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="text-muted">
+                        Menampilkan {{ $transaksi->firstItem() }} sampai {{ $transaksi->lastItem() }} dari {{ $transaksi->total() }} transaksi
+                      </div>
+                      <div>
+                        {{ $transaksi->appends(request()->query())->links() }}
+                      </div>
+                    </div>
+                  </div>
+                @endif
               </div>
             </div>
           </div>
@@ -308,6 +324,11 @@ use Carbon\Carbon;
                   <div class="col-md-6">
                     <label class="form-label">Export Laporan Keuangan</label>
                     <div class="d-flex flex-column gap-2">
+                      @if(auth()->user()->canManageTransactions())
+                        <a href="{{ route('laporan.export-pdf', ['bulan' => $bulan, 'tahun' => $tahun]) }}" class="btn btn-outline-danger" target="_blank">
+                          <i class="bi bi-file-earmark-pdf me-2"></i>Export PDF
+                        </a>
+                      @endif
                       <a href="{{ route('laporan.export-excel', ['bulan' => $bulan, 'tahun' => $tahun]) }}" class="btn btn-outline-success">
                         <i class="bi bi-file-earmark-excel me-2"></i>Export Excel
                       </a>

@@ -111,7 +111,9 @@ use Illuminate\Support\Facades\Storage;
 
                     <div class="col-md-6">
                       <label for="jumlah" class="form-label">Jumlah (Rp) <span class="text-danger">*</span></label>
-                      <input type="number" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" value="{{ old('jumlah', $transaksi->jumlah) }}" placeholder="0" min="0" step="0.01" required>
+                      <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah" value="{{ old('jumlah', number_format($transaksi->jumlah, 0, ',', '.')) }}" placeholder="1.000.000" required>
+                      <input type="hidden" id="jumlah_raw" name="jumlah_raw">
+                      <small class="text-muted">Format: 1.000.000 (gunakan titik sebagai pemisah ribuan)</small>
                       @error('jumlah')
                         <div class="invalid-feedback">{{ $message }}</div>
                       @enderror
@@ -187,6 +189,37 @@ use Illuminate\Support\Facades\Storage;
         document.getElementById('buktiModalImage').src = imageUrl;
         modal.show();
       }
+
+      // Format input jumlah dengan titik
+      document.addEventListener('DOMContentLoaded', function() {
+        const jumlahInput = document.getElementById('jumlah');
+        const jumlahRawInput = document.getElementById('jumlah_raw');
+        const form = jumlahInput.closest('form');
+
+        // Format angka dengan titik sebagai pemisah ribuan
+        function formatNumber(value) {
+          // Hapus semua karakter selain angka
+          const numbers = value.replace(/\D/g, '');
+          // Format dengan titik sebagai pemisah ribuan
+          return numbers.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+
+        // Saat user mengetik
+        jumlahInput.addEventListener('input', function(e) {
+          const formatted = formatNumber(e.target.value);
+          e.target.value = formatted;
+          // Simpan nilai tanpa format untuk dikirim ke server
+          jumlahRawInput.value = formatted.replace(/\./g, '');
+        });
+
+        // Saat form disubmit, pastikan nilai raw dikirim
+        form.addEventListener('submit', function(e) {
+          const rawValue = jumlahInput.value.replace(/\./g, '');
+          jumlahRawInput.value = rawValue;
+          // Ganti nilai input dengan raw value
+          jumlahInput.value = rawValue;
+        });
+      });
     </script>
     @endpush
 

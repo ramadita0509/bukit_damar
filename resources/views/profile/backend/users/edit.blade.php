@@ -90,6 +90,7 @@
                 <option value="">Pilih Role</option>
                 <option value="user" {{ old('role', $user->role) == 'user' ? 'selected' : '' }}>User</option>
                 <option value="admin" {{ old('role', $user->role) == 'admin' ? 'selected' : '' }}>Admin</option>
+                <option value="humas" {{ old('role', $user->role) == 'humas' ? 'selected' : '' }}>Humas</option>
                 <option value="super_admin" {{ old('role', $user->role) == 'super_admin' ? 'selected' : '' }}>Super Admin</option>
               </select>
               @error('role')

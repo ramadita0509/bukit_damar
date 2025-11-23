@@ -1,0 +1,286 @@
+================================================================================
+                    WEBSITE BLUEPRINT - BUKIT DAMAR
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              FRONTEND LAYER                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PUBLIC PAGES (No Authentication Required)
+├── Welcome Page (/)
+├── Blog System
+│   ├── Blog List (/blog)
+│   └── Blog Detail (/blog/{slug})
+│
+├── Information Pages
+│   ├── SKCK (/skck)
+│   ├── KTP (/ktp) + PDF Download
+│   ├── Domisili (/domisili) + PDF Download
+│   ├── Akta Lahir (/akta-lahir)
+│   ├── Surat Kematian (/surat-kematian) + PDF Download
+│   ├── Izin Usaha (/izin-usaha) + PDF Download
+│   ├── Nikah (/nikah) + PDF Download
+│   └── Kontak (/kontak)
+│
+├── Facility Pages
+│   ├── Damar Sport Center (/fasilitas/damar-sport-center)
+│   ├── Masjid (/fasilitas/masjid)
+│   ├── Damar Park (/fasilitas/damar-park)
+│   ├── Balai Warga (/fasilitas/balai-warga)
+│   ├── Meeting Point (/fasilitas/meeting-point)
+│   └── Keamanan (/fasilitas/keamanan)
+│
+└── Other Pages
+    ├── Kepengurusan (/kepengurusan)
+    └── Tentang (/tentang)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          AUTHENTICATION LAYER                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+AUTHENTICATION ROUTES
+├── Login (/login)
+├── Register (/register)
+├── Email Verification (/email/verify)
+├── Password Reset (/forgot-password)
+└── Password Reset Confirmation (/reset-password)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          BACKEND LAYER                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+USER DASHBOARD (Authenticated Users)
+├── Dashboard (/dashboard)
+├── Profile Management
+│   ├── View Profile (/profile)
+│   ├── Edit Profile (PATCH /profile)
+│   └── Delete Account (DELETE /profile)
+│
+├── Financial Reports
+│   ├── View Laporan (/laporan)
+│   ├── Download Iuran PDF (/laporan/iuran-pdf)
+│   └── Export Excel (/laporan/export-excel)
+│
+└── Transaction Proofs
+    └── View Bukti (/storage/bukti-transaksi/{filename})
+
+ADMIN PANEL (Admin & Super Admin)
+├── Transaction Management
+│   ├── List Transactions (GET /transaksi)
+│   ├── Create Transaction (POST /transaksi)
+│   └── Edit Transaction (GET/PUT /transaksi/{id}/edit)
+│
+├── Iuran Report Management
+│   ├── List Reports (GET /laporan-iuran)
+│   ├── Upload Report (POST /laporan-iuran)
+│   └── Delete Report (DELETE /laporan-iuran/{id})
+│
+└── Blog Management
+    ├── List Blogs (GET /blogs)
+    ├── Create Blog (GET/POST /blogs/create)
+    ├── Edit Blog (GET/PUT /blogs/{id}/edit)
+    ├── Delete Blog (DELETE /blogs/{id})
+    └── Upload Image (POST /blogs/upload-image)
+
+SUPER ADMIN PANEL (Super Admin Only)
+├── All Admin Features
+├── Transaction Management
+│   └── Delete Transaction (DELETE /transaksi/{id})
+│
+└── User Management
+    ├── List Users (GET /users)
+    ├── Create User (GET/POST /users/create)
+    ├── Edit User (GET/PUT /users/{id}/edit)
+    └── Delete User (DELETE /users/{id})
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          CONTROLLER LAYER                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+CONTROLLERS
+├── ProfileController
+│   ├── index()          → List users (super admin)
+│   ├── create()         → Create user form (super admin)
+│   ├── store()          → Store new user (super admin)
+│   ├── edit()           → Edit own profile
+│   ├── editUser()       → Edit user form (super admin)
+│   ├── update()         → Update own profile
+│   ├── updateUser()     → Update user (super admin)
+│   ├── destroy()        → Delete own account
+│   └── destroyUser()    → Delete user (super admin)
+│
+├── TransaksiController
+│   ├── index()          → List transactions (admin/super admin)
+│   ├── store()          → Create transaction (admin/super admin)
+│   ├── edit()           → Edit transaction form (admin/super admin)
+│   ├── update()         → Update transaction (admin/super admin)
+│   ├── destroy()        → Delete transaction (super admin)
+│   ├── laporan()        → View financial report
+│   ├── exportExcel()    → Export report to Excel
+│   └── showBukti()      → Show transaction proof
+│
+├── LaporanIuranController
+│   ├── index()          → List iuran reports (admin/super admin)
+│   ├── store()          → Upload iuran report (admin/super admin)
+│   ├── destroy()        → Delete iuran report (admin/super admin)
+│   └── download()       → Download iuran PDF
+│
+└── BlogController
+    ├── frontend()       → Public blog list
+    ├── show()           → Public blog detail
+    ├── index()          → Admin blog list
+    ├── create()         → Create blog form
+    ├── store()          → Store new blog
+    ├── edit()           → Edit blog form
+    ├── update()         → Update blog
+    ├── destroy()        → Delete blog
+    └── uploadImage()    → Upload blog image
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                            MODEL LAYER                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+MODELS
+├── User
+│   ├── Relationships: hasMany(Blog)
+│   ├── Methods:
+│   │   ├── isSuperAdmin()
+│   │   ├── isAdmin()
+│   │   ├── isAdminOrSuperAdmin()
+│   │   ├── canManageUsers()
+│   │   ├── canManageTransactions()
+│   │   └── canDeleteTransactions()
+│   └── Fillable: name, email, password, role, foto_profil
+│
+├── Blog
+│   ├── Relationships: belongsTo(User)
+│   ├── Scopes:
+│   │   ├── published()
+│   │   └── draft()
+│   └── Fillable: judul, slug, konten, excerpt, gambar, kategori, status, user_id, views
+│
+├── Transaksi
+│   ├── Scopes:
+│   │   ├── pemasukan()
+│   │   ├── pengeluaran()
+│   │   ├── bulan()
+│   │   └── tahun()
+│   └── Fillable: tanggal, keterangan, kategori, jenis, jumlah, catatan, bukti
+│
+└── LaporanIuran
+    ├── Scopes:
+    │   ├── bulan()
+    │   └── tahun()
+    └── Fillable: bulan, tahun, nama_file, path_file, judul, keterangan
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          MIDDLEWARE LAYER                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+MIDDLEWARE
+├── auth                    → Require authentication
+├── verified                → Require email verification
+└── role:admin,super_admin  → Require admin or super admin role
+    role:super_admin        → Require super admin role only
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          STORAGE LAYER                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+FILE STORAGE (storage/app/public/)
+├── bukti-transaksi/        → Transaction proof files
+├── laporan-iuran/          → Iuran report PDF files
+├── blog-images/            → Blog featured images
+└── foto-profil/            → User profile photos
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SERVICE LAYER                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+SERVICES
+├── PDF Generation (DomPDF)
+│   ├── KTP Form PDF
+│   ├── Domisili PDF
+│   ├── Surat Kematian PDF
+│   ├── Izin Usaha PDF
+│   └── Nikah PDF
+│
+└── Excel Export
+    └── Financial Report Export
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          ROLE-BASED ACCESS                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+USER ROLE: user (Default)
+├── ✅ View dashboard
+├── ✅ View laporan
+├── ✅ View transaction proofs
+├── ✅ Edit own profile
+└── ✅ View all public pages
+
+ADMIN ROLE: admin
+├── ✅ All user permissions
+├── ✅ Create/Edit transactions
+├── ✅ Upload/Delete laporan iuran
+├── ✅ Create/Edit/Delete blogs
+└── ❌ Cannot delete transactions
+└── ❌ Cannot manage users
+
+SUPER ADMIN ROLE: super_admin
+├── ✅ All admin permissions
+├── ✅ Delete transactions
+├── ✅ Full user management (CRUD)
+└── ✅ Complete system access
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          DATA FLOW                                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+REQUEST FLOW:
+User Request
+    ↓
+Routes (web.php / auth.php)
+    ↓
+Middleware (auth, verified, role)
+    ↓
+Controller
+    ↓
+Model (Database Query)
+    ↓
+Database
+    ↓
+Model (Return Data)
+    ↓
+Controller (Process Logic)
+    ↓
+View (Blade Template)
+    ↓
+Response to User
+
+FILE UPLOAD FLOW:
+User Upload
+    ↓
+Controller (Validation)
+    ↓
+Storage (File System)
+    ↓
+Database (Save Path)
+    ↓
+Response (Success/Error)
+
+PDF GENERATION FLOW:
+User Request PDF
+    ↓
+Controller
+    ↓
+PDF Template (Blade)
+    ↓
+DomPDF Service
+    ↓
+PDF File
+    ↓
+Download Response
+
+================================================================================
+

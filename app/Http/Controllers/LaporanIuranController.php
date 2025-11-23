@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\LaporanIuran;
+use App\Traits\Loggable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class LaporanIuranController extends Controller
 {
+    use Loggable;
     /**
      * Display upload form
      */
@@ -48,7 +50,7 @@ class LaporanIuranController extends Controller
         $path = $file->storeAs('laporan-iuran', $fileName, 'public');
 
         // Simpan ke database
-        LaporanIuran::create([
+        $laporanIuran = LaporanIuran::create([
             'bulan' => $validated['bulan'],
             'tahun' => $validated['tahun'],
             'nama_file' => $fileName,
@@ -56,6 +58,16 @@ class LaporanIuranController extends Controller
             'judul' => $validated['judul'] ?? null,
             'keterangan' => $validated['keterangan'] ?? null,
         ]);
+
+        // Log action
+        $judulLaporan = $laporanIuran->judul ?? $laporanIuran->nama_file;
+        $this->logAction(
+            'upload',
+            $laporanIuran,
+            "Mengunggah laporan iuran: {$judulLaporan} ({$laporanIuran->bulan} {$laporanIuran->tahun})",
+            null,
+            ['nama_file' => $fileName, 'bulan' => $laporanIuran->bulan, 'tahun' => $laporanIuran->tahun]
+        );
 
         return redirect()->route('laporan-iuran.index')
             ->with('success', 'File PDF laporan iuran berhasil diupload!');
@@ -111,6 +123,11 @@ class LaporanIuranController extends Controller
             abort(403, 'Unauthorized action.');
         }
 
+        // Get laporan data before delete
+        $laporanData = $laporanIuran->toArray();
+        $judulLaporan = $laporanIuran->judul ?? $laporanIuran->nama_file;
+        $description = "Menghapus laporan iuran: {$judulLaporan} ({$laporanIuran->bulan} {$laporanIuran->tahun})";
+
         // Hapus file dari storage
         if (Storage::disk('public')->exists($laporanIuran->path_file)) {
             Storage::disk('public')->delete($laporanIuran->path_file);
@@ -118,6 +135,15 @@ class LaporanIuranController extends Controller
 
         // Hapus dari database
         $laporanIuran->delete();
+
+        // Log action
+        $this->logAction(
+            'delete',
+            null,
+            $description,
+            $laporanData,
+            null
+        );
 
         return redirect()->route('laporan-iuran.index')
             ->with('success', 'File PDF laporan iuran berhasil dihapus!');

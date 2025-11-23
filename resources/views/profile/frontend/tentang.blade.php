@@ -80,6 +80,7 @@
                       <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i><strong>Kecamatan:</strong> Jonggol</li>
                       <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i><strong>Kabupaten:</strong> Bogor</li>
                       <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i><strong>Provinsi:</strong> Jawa Barat</li>
+                      <li><i class="bi bi-check-circle me-2" style="color: #28a745;"></i><strong>Kode Pos:</strong> 16830</li>
                     </ul>
                   </div>
                 </div>

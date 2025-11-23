@@ -52,9 +52,9 @@
                 </tr>
               </thead>
               <tbody>
-                @forelse($users as $index => $user)
+                @forelse($users as $user)
                   <tr>
-                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $users->firstItem() + $loop->index }}</td>
                     <td>
                       <strong>{{ $user->name }}</strong>
                       @if($user->id === Auth::id())
@@ -67,6 +67,8 @@
                         <span class="badge bg-danger">Super Admin</span>
                       @elseif($user->role === 'admin')
                         <span class="badge bg-warning text-dark">Admin</span>
+                      @elseif($user->role === 'humas')
+                        <span class="badge bg-info text-dark">Humas</span>
                       @else
                         <span class="badge bg-secondary">User</span>
                       @endif
@@ -101,9 +103,30 @@
             </table>
           </div>
         </div>
+        @if($users->hasPages())
+          <div class="card-footer bg-white border-top py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+              <div class="text-muted small">
+                Menampilkan <strong>{{ $users->firstItem() }}</strong> sampai <strong>{{ $users->lastItem() }}</strong> dari <strong>{{ $users->total() }}</strong> user
+              </div>
+              <nav aria-label="Page navigation">
+                {{ $users->links('pagination::simple-bootstrap-4') }}
+              </nav>
+            </div>
+          </div>
+        @endif
       </div>
     </div>
   </div>
+
+  @push('styles')
+  <style>
+    .pagination .page-link {
+      font-size: 0.875rem;
+      padding: 0.375rem 0.75rem;
+    }
+  </style>
+  @endpush
 
 @endsection
 

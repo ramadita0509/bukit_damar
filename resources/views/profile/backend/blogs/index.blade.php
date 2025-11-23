@@ -54,9 +54,9 @@
                 </tr>
               </thead>
               <tbody>
-                @forelse($blogs as $index => $blog)
+                @forelse($blogs as $blog)
                   <tr>
-                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $blogs->firstItem() + $loop->index }}</td>
                     <td>
                       <strong>{{ $blog->judul }}</strong>
                       @if($blog->gambar)
@@ -110,9 +110,30 @@
             </table>
           </div>
         </div>
+        @if($blogs->hasPages())
+          <div class="card-footer bg-white border-top py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+              <div class="text-muted small">
+                Menampilkan <strong>{{ $blogs->firstItem() }}</strong> sampai <strong>{{ $blogs->lastItem() }}</strong> dari <strong>{{ $blogs->total() }}</strong> blog
+              </div>
+              <nav aria-label="Page navigation">
+                {{ $blogs->links() }}
+              </nav>
+            </div>
+          </div>
+        @endif
       </div>
     </div>
   </div>
+
+  @push('styles')
+  <style>
+    .pagination .page-link {
+      font-size: 0.875rem;
+      padding: 0.375rem 0.75rem;
+    }
+  </style>
+  @endpush
 
 @endsection
 

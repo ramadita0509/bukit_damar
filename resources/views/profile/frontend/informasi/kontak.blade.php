@@ -30,7 +30,7 @@
                     <i class="bi bi-geo-alt"></i>
                     <h3>Alamat</h3>
                     <p>Cluster Bukit Damar Citra Indah City</p>
-                    <p>Desa Singajaya Kecamatan Jonggol Kabupaten Bogor</p>
+                    <p>Desa Singajaya Kecamatan Jonggol Kabupaten Bogor 16830</p>
                   </div>
                 </div><!-- End Info Item -->
 
@@ -55,8 +55,7 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="500">
                     <i class="bi bi-clock"></i>
                     <h3>Jam Operasional</h3>
-                    <p>Senin - Jumat</p>
-                    <p>09:00 - 17:00 WIB</p>
+                    <p>24 Jam</p>
                   </div>
                 </div><!-- End Info Item -->
               </div>

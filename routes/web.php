@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\LaporanIuranController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ActionLogController;
 use Illuminate\Support\Facades\Route;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -17,10 +18,12 @@ Route::get('/dashboard', function () {
 Route::get('/laporan', [TransaksiController::class, 'laporan'])->middleware(['auth', 'verified'])->name('laporan');
 Route::get('/laporan/iuran-pdf', [LaporanIuranController::class, 'download'])->middleware(['auth', 'verified'])->name('laporan.iuran-pdf');
 Route::get('/laporan/export-excel', [TransaksiController::class, 'exportExcel'])->middleware(['auth', 'verified'])->name('laporan.export-excel');
+Route::get('/laporan/export-pdf', [TransaksiController::class, 'exportLaporanPdf'])->middleware(['auth', 'verified'])->name('laporan.export-pdf');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::patch('/profile/email', [ProfileController::class, 'updateEmail'])->name('profile.update-email');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Route untuk manage users (hanya super admin)
@@ -88,27 +91,27 @@ Route::get('/nikah/download-pdf', function () {
 })->name('nikah.download-pdf');
 
 Route::get('/fasilitas/damar-sport-center', function () {
-    return view('profile.fasilitas.dsc');
+    return view('profile.frontend.fasilitas.dsc');
 })->name('fasilitas.dsc');
 
 Route::get('/fasilitas/masjid', function () {
-    return view('profile.fasilitas.masjid');
+    return view('profile.frontend.fasilitas.masjid');
 })->name('fasilitas.masjid');
 
 Route::get('/fasilitas/damar-park', function () {
-    return view('profile.fasilitas.damar-park');
+    return view('profile.frontend.fasilitas.damar-park');
 })->name('fasilitas.damar-park');
 
 Route::get('/fasilitas/balai-warga', function () {
-    return view('profile.fasilitas.balai-warga');
+    return view('profile.frontend.fasilitas.balai-warga');
 })->name('fasilitas.balai-warga');
 
 Route::get('/fasilitas/meeting-point', function () {
-    return view('profile.fasilitas.meeting-point');
+    return view('profile.frontend.fasilitas.meeting-point');
 })->name('fasilitas.meeting-point');
 
 Route::get('/fasilitas/keamanan', function () {
-    return view('profile.fasilitas.keamanan');
+    return view('profile.frontend.fasilitas.keamanan');
 })->name('fasilitas.keamanan');
 
 Route::get('/kepengurusan', function () {
@@ -127,6 +130,7 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::middleware(['auth', 'verified'])->group(function () {
     // Route untuk melihat bukti transaksi (semua user yang sudah login)
     Route::get('/storage/bukti-transaksi/{filename}', [TransaksiController::class, 'showBukti'])->name('transaksi.bukti');
+    Route::get('/storage/bukti-iuran/{filename}', [TransaksiController::class, 'showBuktiIuran'])->name('iuran.bukti');
 
     // Hanya admin dan super admin bisa input/edit transaksi
     Route::middleware('role:admin,super_admin')->group(function () {
@@ -148,8 +152,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::delete('/laporan-iuran/{laporanIuran}', [LaporanIuranController::class, 'destroy'])->name('laporan-iuran.destroy');
     });
 
-    // Route untuk Blog Management (Admin & Super Admin)
-    Route::middleware('role:admin,super_admin')->group(function () {
+    // Route untuk Blog Management (Humas & Super Admin)
+    Route::middleware('role:humas,super_admin')->group(function () {
         Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
         Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
         Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
@@ -157,6 +161,35 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
         Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
         Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+    });
+
+    // Route untuk Action Logs (Hanya Super Admin)
+    Route::middleware('role:super_admin')->group(function () {
+        Route::get('/action-logs', [ActionLogController::class, 'index'])->name('action-logs.index');
+        Route::get('/action-logs/{actionLog}', [ActionLogController::class, 'show'])->name('action-logs.show');
+    });
+
+    // Route untuk Pembayaran Iuran Warga (Semua User)
+    // Pastikan route GET didefinisikan sebelum route POST untuk menghindari konflik
+    Route::get('/iuran', function () {
+        return redirect()->route('iuran.create');
+    })->name('iuran.index');
+    Route::get('/iuran/create', [TransaksiController::class, 'createIuran'])->name('iuran.create');
+    Route::get('/iuran/history', [TransaksiController::class, 'historyIuran'])->name('iuran.history');
+    Route::get('/iuran/laporan', [TransaksiController::class, 'laporanIuranWarga'])->name('iuran.laporan');
+    Route::get('/iuran/laporan/export-pdf', [TransaksiController::class, 'exportLaporanIuranPdf'])->name('iuran.laporan.export-pdf');
+    Route::post('/iuran', [TransaksiController::class, 'storeIuran'])->name('iuran.store');
+
+    // Route untuk Admin mengelola pembayaran iuran
+    Route::middleware('role:admin,super_admin')->group(function () {
+        Route::get('/iuran/pending', [TransaksiController::class, 'pendingIuran'])->name('iuran.pending');
+        Route::get('/iuran/checklist', [TransaksiController::class, 'checklistIuran'])->name('iuran.checklist');
+        Route::post('/iuran/checklist/update', [TransaksiController::class, 'updateChecklistIuran'])->name('iuran.checklist.update');
+        Route::post('/iuran/checklist/update-note', [TransaksiController::class, 'updateNoteChecklist'])->name('iuran.checklist.update-note');
+        Route::get('/iuran/checklist/export-pdf', [TransaksiController::class, 'exportChecklistPdf'])->name('iuran.checklist.export-pdf');
+        Route::get('/iuran/checklist/export-excel', [TransaksiController::class, 'exportChecklistExcel'])->name('iuran.checklist.export-excel');
+        Route::post('/iuran/{iuranWarga}/approve', [TransaksiController::class, 'approveIuran'])->name('iuran.approve');
+        Route::post('/iuran/{iuranWarga}/reject', [TransaksiController::class, 'rejectIuran'])->name('iuran.reject');
     });
 });
 

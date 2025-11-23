@@ -18,6 +18,12 @@
 
       <div class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
+          @include('profile.backend.partials.update-email-form')
+        </div>
+      </div>
+
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
           @include('profile.backend.partials.update-password-form')
         </div>
       </div>

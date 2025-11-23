@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'role',
         'foto_profil',
+        'alamat',
     ];
 
     /**
@@ -73,6 +74,22 @@ class User extends Authenticatable
     }
 
     /**
+     * Check if user is humas
+     */
+    public function isHumas(): bool
+    {
+        return $this->role === 'humas';
+    }
+
+    /**
+     * Check if user can manage blogs
+     */
+    public function canManageBlogs(): bool
+    {
+        return in_array($this->role, ['humas', 'super_admin']);
+    }
+
+    /**
      * Check if user can manage users
      */
     public function canManageUsers(): bool
@@ -94,5 +111,29 @@ class User extends Authenticatable
     public function canDeleteTransactions(): bool
     {
         return $this->isSuperAdmin();
+    }
+
+    /**
+     * Get the transactions for the user.
+     */
+    public function transaksis()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
+
+    /**
+     * Get the iuran warga payments for the user.
+     */
+    public function iuranWargas()
+    {
+        return $this->hasMany(IuranWarga::class);
+    }
+
+    /**
+     * Get the checklist iuran for the user.
+     */
+    public function checklistIurans()
+    {
+        return $this->hasMany(ChecklistIuran::class);
     }
 }
